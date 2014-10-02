@@ -1,0 +1,12 @@
+- hosts: all
+  sudo: yes
+  roles:
+  - role: jnv.unattended-upgrades
+    when: ansible_os_family == "Ubuntu"
+    unattended_origins_patterns: []
+    unattended_package_blacklist: []
+    unattended_autofix_interrupted_dpkg: true
+    unattended_minimal_steps: true
+    unattended_install_on_shutdown: false
+    unattended_remove_unused_dependencies: false
+    unattended_automatic_reboot: false

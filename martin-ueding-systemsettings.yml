@@ -1,0 +1,19 @@
+- hosts: all
+  sudo: yes
+  tasks:
+  - name: Install fish Shell
+    apt: name=fish state=present  
+
+  - name: Install vnstat
+    apt: name=vnstat state=present  
+
+  - name: Install vim
+    apt: name=vim state=present
+
+  - name: Remove Amazon Shopping Lens
+    apt: name=unity-webapps-common state=absent purge=yes
+
+  - name: Add PPA
+    apt_repository: >
+        repo='ppa:martin-ueding/stable'
+        state=present
