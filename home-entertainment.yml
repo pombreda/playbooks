@@ -1,33 +1,14 @@
 - name: Set up home entertainment system
   hosts:
-  - Frederike-Medion.local
-  - Martin-Aspire-X3200.local
+      #- Frederike-Medion.local
+      #- Martin-Aspire-X3200.local
   - Martin-Pavilion.local
   sudo: yes
   tasks:
   - name: Install VLC
     apt: name=vlc state=present
 
-  - name: Install MythTV
-    apt: name=mythtv state=present
-
-  - name: Install MythTV Mythbuntu Theme
-    apt: name=mythtv-theme-mythbuntu state=present
-
-  - name: Create MythTV MySQL database
-    mysql_db: >
-        name=mythconverg state=present
-        login_user=root login_password=""
-
-  - name: Create MythTV MySQL user
-    mysql_user: >
-        name=mythtv password=mythtv state=present priv=mythconverg.*:ALL,GRANT
-        login_user=root login_password=""
-
   - name: Install DVD CSS codecs
     command: /usr/share/doc/libdvdread4/install-css.sh
     args:
       creates: /usr/share/doc/libdvdcss2
-
-  - name: Install gstreamer libav
-    apt: name=gstreamer1.0-libav state=present
