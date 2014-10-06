@@ -1,4 +1,6 @@
-- hosts: all
+- hosts:
+  - towers
+  sudo: yes
   tasks:
   - name: Install personal base packages
     action: apt pkg={{ item }} state=installed
@@ -11,6 +13,7 @@
     - filezilla
     - firefox
     - fish
+    - hardinfo
     - htop
     - imagemagick
     - inkscape
@@ -18,7 +21,7 @@
     - maintenance
     - pavucontrol
     - pinentry-qt4
-    - taskwarrior
+    - task
     - vim
     - vnstat
     - xournal
