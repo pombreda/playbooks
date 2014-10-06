@@ -1,7 +1,8 @@
-- hosts: all
+- hosts:
+  - localhost
   tasks:
   - name: Install development packages
-    action: apt pkg={{ item }} state=installed
+    action: apt name={{ item }} state=installed
     with_items:
     - boxes
     - clang

@@ -1,18 +1,33 @@
 - hosts: all
   tasks:
-  - name: Install fish Shell
-    apt: name=fish state=present  
-
-  - name: Install vnstat
-    apt: name=vnstat state=present  
-
-  - name: Install vim
-    apt: name=vim state=present
+  - name: Install personal base packages
+    action: apt pkg={{ item }} state=installed
+    with_items:
+    - awesome
+    - awesome-extra
+    - backup-scripts
+    - bogomips
+    - enigmail
+    - filezilla
+    - firefox
+    - fish
+    - htop
+    - imagemagick
+    - inkscape
+    - lock-and-off
+    - maintenance
+    - pavucontrol
+    - pinentry-qt4
+    - taskwarrior
+    - vim
+    - vnstat
+    - xournal
+    - youtube-dl
 
   - name: Remove Amazon Shopping Lens
     apt: name=unity-webapps-common state=absent purge=yes
 
-  - name: Add PPA
+  - name: Add PPA martin-ueding/stable
     apt_repository: >
         repo='ppa:martin-ueding/stable'
         state=present
