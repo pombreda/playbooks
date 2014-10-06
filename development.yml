@@ -1,0 +1,35 @@
+- hosts: all
+  tasks:
+  - name: Install development packages
+    action: apt pkg={{ item }} state=installed
+    with_items:
+    - boxes
+    - clang
+    - copyright-updater
+    - fonts-droid
+    - g++
+    - git
+    - git-gui
+    - git-ignore-untracked
+    - gitk
+    - latex-edit
+    - latexmk
+    - project-tools
+    - python3-dateutil
+    - python3-docutils
+    - python3-matplotlib
+    - python3-numpy
+    - python3-scipy
+    - python3-sphinx
+    - python3-unitprint
+    - template-spawner
+    - texlive-base
+    - texlive-bibtex-extra
+    - texlive-binaries
+    - texlive-fonts-extra
+    - texlive-fonts-recommended
+    - texlive-lang-german
+    - texlive-latex-extra
+    - texlive-math-extra
+    - texlive-science
+    - vim-gtk
