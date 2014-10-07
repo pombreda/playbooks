@@ -43,3 +43,14 @@
     
   - name: Remove Flash Player
     apt: name=flashplugin-installer state=absent purge=yes
+
+- hosts:
+  - localhost
+  sudo: yes
+
+  - name: Install packages to enhance Kubuntu
+    action: apt pkg={{ item }} state=installed
+    with_items:
+
+    - clementine
+    - thinkpad-scripts
