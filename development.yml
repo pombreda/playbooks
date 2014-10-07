@@ -1,12 +1,15 @@
 - hosts:
   - localhost
+  sudo: yes
   tasks:
   - name: Install development packages
     action: apt name={{ item }} state=installed
     with_items:
     - boxes
     - clang
+    - cmake
     - copyright-updater
+    - exuberant-ctags
     - fonts-droid
     - g++
     - git

@@ -1,7 +1,12 @@
 - hosts:
-  - towers
+  - localhost
   sudo: yes
   tasks:
+  - name: Add PPA martin-ueding/stable
+    apt_repository: >
+        repo='ppa:martin-ueding/stable'
+        state=present
+        
   - name: Install personal base packages
     action: apt pkg={{ item }} state=installed
     with_items:
@@ -19,6 +24,7 @@
     - inkscape
     - lock-and-off
     - maintenance
+    - gufw
     - pavucontrol
     - pinentry-qt4
     - task
@@ -29,8 +35,9 @@
 
   - name: Remove Amazon Shopping Lens
     apt: name=unity-webapps-common state=absent purge=yes
-
-  - name: Add PPA martin-ueding/stable
-    apt_repository: >
-        repo='ppa:martin-ueding/stable'
-        state=present
+        
+  - name: Set shell to fish
+    user: name=mu shell=/usr/bin/fish
+    
+  - name: Remove Flash Player
+    apt: name=flashplugin-installer state=absent purge=yes
