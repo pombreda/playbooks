@@ -10,6 +10,7 @@
   - name: Install personal base packages
     action: apt pkg={{ item }} state=installed
     with_items:
+
     - awesome
     - awesome-extra
     - backup-scripts
@@ -18,16 +19,17 @@
     - filezilla
     - firefox
     - fish
+    - gufw
     - hardinfo
     - htop
     - imagemagick
     - inkscape
     - lock-and-off
     - maintenance
-    - gufw
     - pavucontrol
     - pinentry-qt4
     - task
+    - thunderbird-locale-de
     - vim
     - vnstat
     - xournal
