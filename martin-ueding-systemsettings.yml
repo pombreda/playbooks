@@ -48,6 +48,7 @@
   - localhost
   sudo: yes
 
+  tasks:
   - name: Install packages to enhance Kubuntu
     action: apt pkg={{ item }} state=installed
     with_items:
