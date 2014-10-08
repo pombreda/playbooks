@@ -5,6 +5,7 @@
   - name: Install development packages
     action: apt name={{ item }} state=installed
     with_items:
+
     - boxes
     - clang
     - cmake
@@ -18,11 +19,17 @@
     - gitk
     - latex-edit
     - latexmk
+    - libboost-filesystem-dev
+    - libboost-program-options-dev
+    - libboost-system-dev
+    - libcppunit-dev
+    - libeigen3-dev
     - project-tools
     - python3-dateutil
     - python3-docutils
     - python3-matplotlib
     - python3-numpy
+    - python3-prettytable
     - python3-scipy
     - python3-sphinx
     - python3-unitprint
