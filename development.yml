@@ -34,6 +34,7 @@
     - python3-sphinx
     - python3-unitprint
     - template-spawner
+    - tex-keywordprg
     - texlive-base
     - texlive-bibtex-extra
     - texlive-binaries
