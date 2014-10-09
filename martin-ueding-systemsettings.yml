@@ -53,7 +53,10 @@
     action: apt pkg={{ item }} state=installed
     with_items:
 
+    - a4-scan
     - clementine
     - fatrat
+    - gstreamer0.10-plugins-bad
     - konversation
+    - legacy-file-formats
     - thinkpad-scripts
