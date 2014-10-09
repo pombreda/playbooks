@@ -49,9 +49,11 @@
   sudo: yes
 
   tasks:
-  - name: Install packages to enhance Kubuntu
+  - name: Install packages I want on my main computer
     action: apt pkg={{ item }} state=installed
     with_items:
 
     - clementine
+    - fatrat
+    - konversation
     - thinkpad-scripts
