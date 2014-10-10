@@ -10,6 +10,7 @@
     - clang
     - cmake
     - copyright-updater
+    - debhelper
     - exuberant-ctags
     - fastplot
     - fonts-droid
