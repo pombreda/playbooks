@@ -11,6 +11,7 @@
     - cmake
     - copyright-updater
     - exuberant-ctags
+    - fastplot
     - fonts-droid
     - g++
     - git
@@ -24,6 +25,7 @@
     - libboost-system-dev
     - libcppunit-dev
     - libeigen3-dev
+    - nvidia-cuda-dev
     - project-tools
     - python3-dateutil
     - python3-docutils
