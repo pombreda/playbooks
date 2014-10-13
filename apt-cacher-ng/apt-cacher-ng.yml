@@ -1,0 +1,26 @@
+# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+# Licensed under The GNU Public License Version 2 (or later)
+
+# This Ansible playbook will install apt-cacher-ng on one server and lets every
+# Debian bases system use this.
+
+- name: Setup Server
+  hosts:
+  - martin-gelderland.local
+
+  tasks:
+  - name: Install apt-cacher-ng
+    apt: pkg=apt-cacher-ng state=installed
+
+- name: Set up apt cache on clients
+  hosts:
+#  - towers
+#  - vms
+  - localhost
+
+  sudo: yes
+
+  tasks:
+  - name: Copy config file
+    when: ansible_os_family == "Debian"
+    template: src=01proxy dest=/etc/apt/apt.conf.d/01proxy
