@@ -14,9 +14,9 @@
 
 - name: Set up apt cache on clients
   hosts:
-#  - towers
-#  - vms
-  - localhost
+  - towers
+  - vms
+#  - localhost
 
   sudo: yes
 
