@@ -19,6 +19,7 @@
     - filezilla
     - firefox
     - fish
+    - gstreamer0.10-plugins-bad
     - gufw
     - hardinfo
     - htop
@@ -26,14 +27,16 @@
     - inkscape
     - kde-wallpapers
     - kdewallpapers
+    - konversation
+    - legacy-file-formats
     - lock-and-off
     - maintenance
     - pavucontrol
     - pinentry-qt4
+    - qrencode
     - task
     - thunderbird-locale-de
     - ubuntu-gnome-wallpapers
-    - qrencode
     - ubuntu-wallpapers
     - vim
     - vnstat
@@ -61,8 +64,5 @@
     - a4-scan
     - clementine
     - fatrat
-    - gstreamer0.10-plugins-bad
-    - konversation
-    - legacy-file-formats
     - mediathekview
     - thinkpad-scripts
