@@ -1,0 +1,19 @@
+# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install LaTeX packages
+  action: apt name={{ item }} state=installed
+  with_items:
+
+  - kbibtex
+  - latex-edit
+  - latexmk
+  - tex-keywordprg
+  - texlive-base
+  - texlive-bibtex-extra
+  - texlive-binaries
+  - texlive-fonts-extra
+  - texlive-fonts-recommended
+  - texlive-lang-german
+  - texlive-latex-extra
+  - texlive-math-extra
+  - texlive-science

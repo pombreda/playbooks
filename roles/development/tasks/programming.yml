@@ -1,0 +1,17 @@
+# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install programming packages
+  action: apt name={{ item }} state=installed
+  with_items:
+
+  - clang
+  - cmake
+  - debhelper
+  - g++
+  - libboost-filesystem-dev
+  - libboost-program-options-dev
+  - libboost-system-dev
+  - libcppunit-dev
+  - libeigen3-dev
+  - nvidia-cuda-dev
+  - nvidia-cuda-toolkit

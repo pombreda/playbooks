@@ -1,0 +1,9 @@
+# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install packages
+  action: apt pkg={{ item }} state=present
+  with_items:
+
+  - apache2
+  - libapache2-mod-php5
+  - php5-mysql
