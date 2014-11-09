@@ -1,8 +1,0 @@
-# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
-
-- name: Deploy shopping list site
-  hosts:
-  - martin-gelderland.local
-
-  roles:
-  - shopping-list

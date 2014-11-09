@@ -1,6 +1,0 @@
-- name: Set up home entertainment system
-  hosts: []
-  sudo: yes
-
-  roles:
-  - home-entertainment

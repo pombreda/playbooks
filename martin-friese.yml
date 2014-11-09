@@ -1,0 +1,9 @@
+# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+
+- name: martin-friese
+  hosts: localhost
+  sudo: yes
+  roles:
+  - apt-cacher-client
+  - development
+  - martin-ueding-settings

@@ -1,0 +1,18 @@
+# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install packages
+  action: apt pkg={{ item }} state=installed
+  with_items:
+
+  - a4-scan
+  - clementine
+  - fatrat
+  - gimp
+  - mediathekview
+  - mp3-packer
+  - pdftk
+  - thinkpad-scripts
+  - uni-tools
+  - virtualbox
+  - virtualbox-qt
+  - whois

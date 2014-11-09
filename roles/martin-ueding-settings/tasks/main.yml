@@ -1,0 +1,56 @@
+# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+
+- name: Add PPA martin-ueding/stable
+  apt_repository: >
+      repo='ppa:martin-ueding/stable'
+      state=present
+
+- name: Install packages
+  action: apt pkg={{ item }} state=installed
+  with_items:
+
+  - apt-file
+  - awesome
+  - awesome-extra
+  - backup-scripts
+  - bogomips
+  - enigmail
+  - filezilla
+  - firefox
+  - fish
+  - gstreamer0.10-plugins-bad
+  - gufw
+  - hardinfo
+  - htop
+  - imagemagick
+  - inkscape
+    #- kde-wallpapers
+    #- kdewallpapers
+  - konversation
+  - legacy-file-formats
+  - lock-and-off
+  - maintenance
+  - pavucontrol
+  - pinentry-qt4
+  - python3-termcolor
+  - qrencode
+  - task
+  - thunderbird-locale-de
+  - tree
+    #- ubuntu-gnome-wallpapers
+    #- ubuntu-wallpapers
+  - unwrap-pdf-to-jpeg
+  - vim
+  - vlc
+  - vnstat
+  - xournal
+  - youtube-dl
+
+- name: Remove Amazon Shopping Lens
+  apt: name=unity-webapps-common state=absent purge=yes
+
+- name: Set shell to fish
+  user: name=mu shell=/usr/bin/fish
+
+- name: Remove Flash Player
+  apt: name=flashplugin-installer state=absent purge=yes
