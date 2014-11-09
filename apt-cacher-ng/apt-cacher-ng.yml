@@ -5,14 +5,11 @@
 # Debian bases system use this.
 
 - name: Setup Server
-  hosts: []
-      #- martin-gelderland.local
+  hosts:
+  - martin-gelderland.local
 
-  tasks:
-  - name: Install apt-cacher-ng
-    apt: pkg=apt-cacher-ng state=installed
-  - name: Copy config file
-    template: src=01proxy-localhost dest=/etc/apt/apt.conf.d/01proxy
+  roles:
+  - apt-cacher-server
 
 - name: Set up apt cache on clients
   hosts:
@@ -22,7 +19,5 @@
 
   sudo: yes
 
-  tasks:
-  - name: Copy config file
-    when: ansible_os_family == "Debian"
-    template: src=01proxy dest=/etc/apt/apt.conf.d/01proxy
+  roles:
+  - apt-cacher-client

@@ -1,0 +1,5 @@
+# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+
+- name: Copy config file
+  when: ansible_os_family == "Debian"
+  template: src=01proxy dest=/etc/apt/apt.conf.d/01proxy
