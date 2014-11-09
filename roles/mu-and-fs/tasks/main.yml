@@ -1,0 +1,9 @@
+- name: Add Martin Ueding
+  user: >
+      name=mu comment="Martin Ueding"
+      password=***REMOVED***
+
+- name: Add ***REMOVED***
+  user: >
+      name=fs comment="***REMOVED***"
+      password=***REMOVED***
