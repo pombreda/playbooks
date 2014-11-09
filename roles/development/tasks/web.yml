@@ -6,6 +6,7 @@
 
   - apache2
   - libapache2-mod-php5
+  - mysql-server
   - php5-mysql
 
 - name: Create MySQL database
