@@ -5,18 +5,20 @@
 # Debian bases system use this.
 
 - name: Setup Server
-  hosts:
-  - martin-gelderland.local
+  hosts: []
+      #- martin-gelderland.local
 
   tasks:
   - name: Install apt-cacher-ng
     apt: pkg=apt-cacher-ng state=installed
+  - name: Copy config file
+    template: src=01proxy-localhost dest=/etc/apt/apt.conf.d/01proxy
 
 - name: Set up apt cache on clients
   hosts:
+  - localhost
   - towers
   - vms
-#  - localhost
 
   sudo: yes
 

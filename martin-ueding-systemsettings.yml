@@ -1,4 +1,5 @@
-- hosts:
+- name: Perform setup on all machines
+  hosts:
   - localhost
   sudo: yes
   tasks:
@@ -7,10 +8,11 @@
         repo='ppa:martin-ueding/stable'
         state=present
 
-  - name: Install personal base packages
+  - name: Install packages
     action: apt pkg={{ item }} state=installed
     with_items:
 
+    - apt-file
     - awesome
     - awesome-extra
     - backup-scripts
@@ -25,23 +27,27 @@
     - htop
     - imagemagick
     - inkscape
-    - kde-wallpapers
-    - kdewallpapers
     - konversation
     - legacy-file-formats
     - lock-and-off
     - maintenance
     - pavucontrol
     - pinentry-qt4
+    - python3-termcolor
     - qrencode
     - task
     - thunderbird-locale-de
-    - ubuntu-gnome-wallpapers
-    - ubuntu-wallpapers
+    - tree
+    - unwrap-pdf-to-jpeg
     - vim
+    - vlc
     - vnstat
     - xournal
     - youtube-dl
+#    - kde-wallpapers
+#    - kdewallpapers
+#    - ubuntu-gnome-wallpapers
+#    - ubuntu-wallpapers
 
   - name: Remove Amazon Shopping Lens
     apt: name=unity-webapps-common state=absent purge=yes
@@ -52,17 +58,25 @@
   - name: Remove Flash Player
     apt: name=flashplugin-installer state=absent purge=yes
 
-- hosts:
+- name: Perform setup on main computer
+  hosts:
   - localhost
   sudo: yes
 
   tasks:
-  - name: Install packages I want on my main computer
+  - name: Install packages
     action: apt pkg={{ item }} state=installed
     with_items:
 
     - a4-scan
     - clementine
     - fatrat
+    - gimp
     - mediathekview
+    - mp3-packer
+    - pdftk
     - thinkpad-scripts
+    - uni-tools
+    - virtualbox
+    - virtualbox-qt
+    - whois

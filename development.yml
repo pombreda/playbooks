@@ -6,6 +6,7 @@
     action: apt name={{ item }} state=installed
     with_items:
 
+    - astyle
     - boxes
     - clang
     - cmake
@@ -19,6 +20,7 @@
     - git-gui
     - git-ignore-untracked
     - gitk
+    - kbibtex
     - latex-edit
     - latexmk
     - libboost-filesystem-dev
@@ -27,7 +29,10 @@
     - libcppunit-dev
     - libeigen3-dev
     - nvidia-cuda-dev
+    - nvidia-cuda-toolkit
+    - ohcount
     - project-tools
+    - python-django
     - python3-dateutil
     - python3-docutils
     - python3-matplotlib

@@ -2,7 +2,7 @@
   sudo: yes
   roles:
   - role: jnv.unattended-upgrades
-    when: ansible_os_family == "Ubuntu"
+    when: ansible_distribution == "Ubuntu"
     unattended_origins_patterns: []
     unattended_package_blacklist: []
     unattended_autofix_interrupted_dpkg: true
