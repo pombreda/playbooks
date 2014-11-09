@@ -1,14 +1,6 @@
 - name: Set up home entertainment system
-  hosts:
-      #- Frederike-Medion.local
-      #- Martin-Aspire-X3200.local
-  - Martin-Pavilion.local
+  hosts: []
   sudo: yes
-  tasks:
-  - name: Install VLC
-    apt: name=vlc state=present
 
-  - name: Install DVD CSS codecs
-    command: /usr/share/doc/libdvdread4/install-css.sh
-    args:
-      creates: /usr/share/doc/libdvdcss2
+  roles:
+  - home-entertainment

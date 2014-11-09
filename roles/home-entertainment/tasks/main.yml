@@ -1,0 +1,9 @@
+# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install VLC
+  apt: name=vlc state=present
+
+- name: Install DVD CSS codecs
+  command: /usr/share/doc/libdvdread4/install-css.sh
+  args:
+    creates: /usr/share/doc/libdvdcss2
