@@ -4,22 +4,5 @@
   hosts:
   - martin-gelderland.local
 
-  tasks:
-  - name: Install Apacke
-    apt: name=apache2 state=present
-
-#  - name:
-#    git: repo=https://github.com/martin-ueding/shopping-list-site.git dest=/opt/shopping-list-site
-
-  - name: Check out master branch
-    command: git checkout master
-    args:
-      chdir: /opt/shopping-list-site
-
-  - name: Pull latest changes
-    command: git pull origin master
-    args:
-      chdir: /opt/shopping-list-site
-
-  - name: Restart Apache
-    service: name=apache2 state=restarted
+  roles:
+  - shopping-list
