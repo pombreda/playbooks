@@ -1,3 +1,5 @@
+# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+
 - name: Add Martin Ueding
   user: >
       name=mu comment="Martin Ueding"
