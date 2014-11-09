@@ -1,0 +1,14 @@
+dependencies:
+- role: jnv.unattended-upgrades
+  when: ansible_distribution == "Ubuntu"
+  unattended_origins_patterns:
+  - 'origin=Ubuntu,archive=${distro_codename}-updates,label=Ubuntu'
+  - 'origin=Ubuntu,archive=${distro_codename}-security,label=Ubuntu'
+  - 'origin=Ubuntu,archive=${distro_codename}-proposed,label=Ubuntu'
+  - 'origin=Ubuntu,archive=${distro_codename}-backports,label=Ubuntu'
+  unattended_package_blacklist: []
+  unattended_autofix_interrupted_dpkg: true
+  unattended_minimal_steps: true
+  unattended_install_on_shutdown: false
+  unattended_remove_unused_dependencies: false
+  unattended_automatic_reboot: false
