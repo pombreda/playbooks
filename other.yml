@@ -1,16 +1,6 @@
 # Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
 
-- name: Ubuntu based machines
-  hosts:
-  - frederike-lusitano.local
-  - martin-tinker.local
-  - martin-welsh.local
-  sudo: yes
-  roles:
-  - apt-cacher-client
-  - mu-and-fs
-
-- name: Debian machines
+- name: Debian VMs
   hosts:
   - martin-stable.local
   - martin-unstable.local
@@ -25,15 +15,21 @@
   sudo: yes
   roles:
   - home-entertainment
+  - apt-cacher-client
+  - mu-and-fs
 
 - name: martin-tinker
   hosts: martin-tinker.local
   sudo: yes
   roles:
   - development
+  - apt-cacher-client
+  - mu-and-fs
 
 - name: martin-welsh
   hosts: martin-welsh.local
   sudo: yes
   roles:
   - development
+  - apt-cacher-client
+  - mu-and-fs
