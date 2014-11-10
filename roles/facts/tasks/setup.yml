@@ -4,6 +4,7 @@
   - martin-xubuntu.local
   tasks:
   - name: Write Template
-    local_action: template src=setup.html.j2 dest=/tmp/{{ ansible_hostname }}.rst owner=mu group=mu
+    local_action: template src=setup.rst.j2 dest=/tmp/{{ ansible_hostname }}.rst owner=mu group=mu
+
   - name: Compile reST to HTML
     local_action: command rst2html /tmp/{{ ansible_hostname }}.rst /tmp/{{ ansible_hostname }}.html
