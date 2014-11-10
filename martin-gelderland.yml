@@ -4,5 +4,6 @@
   hosts: martin-gelderland.local
   roles:
   - apt-cacher-server
+  - dev-programming
   - mu-and-fs
   - shopping-list

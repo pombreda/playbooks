@@ -8,6 +8,7 @@
   - libapache2-mod-php5
   - mysql-server
   - php5-mysql
+  - python-django
 
 - name: Create MySQL database
   mysql_db: >
