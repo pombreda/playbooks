@@ -1,1 +1,0 @@
-Acquire::http { Proxy "http://martin-gelderland.local:3142"; };

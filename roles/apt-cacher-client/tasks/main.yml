@@ -2,4 +2,4 @@
 
 - name: Copy config file
   when: ansible_os_family == "Debian"
-  template: src=01proxy dest=/etc/apt/apt.conf.d/01proxy
+  template: src=01proxy.j2 dest=/etc/apt/apt.conf.d/01proxy
