@@ -17,6 +17,7 @@
   - home-entertainment
   - apt-cacher-client
   - mu-and-fs
+  - mu-conf
 
 - name: martin-tinker
   hosts: martin-tinker.local
@@ -25,6 +26,7 @@
   - development
   - apt-cacher-client
   - mu-and-fs
+  - mu-conf
 
 - name: martin-welsh
   hosts: martin-welsh.local
@@ -33,3 +35,4 @@
   - development
   - apt-cacher-client
   - mu-and-fs
+  - mu-conf

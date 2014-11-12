@@ -7,4 +7,5 @@
   - apt-cacher-client
   - dev-latex
   - dev-programming
-  - martin-ueding-settings
+  - mu-conf
+  - mu-conf-main
