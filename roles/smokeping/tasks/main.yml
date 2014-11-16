@@ -5,6 +5,5 @@
 
 - name: Set up targets
   template: src=Targets.j2 dest=/etc/smokeping/config.d/Targets
-
-- name: Restart smokeping
-  service: name=smokeping state=restarted
+  notify:
+  - restart smokeping

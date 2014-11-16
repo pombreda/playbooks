@@ -6,13 +6,13 @@
   - role: smokeping
     sections:
       Local:
-      - fritz.box
-      - localhost
+      - [Router, fritz.box]
+      - [localhost, localhost]
       Internet:
-      - chaos.stw-bonn.de
-      - martin-ueding.de
-      - spiegel.de
-      - unitymedia.de
+      - [chaos, chaos.stw-bonn.de]
+      - [martin-ueding, martin-ueding.de]
+      - [spiegel, spiegel.de]
+      - [unitymedia, unitymedia.de]
   - dev-programming
   - apt-cacher-server
   - mu-and-fs

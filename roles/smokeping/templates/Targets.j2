@@ -9,12 +9,15 @@ remark = {{ remark }}
 {% for section, servers in sections.iteritems() %}
 + {{ section }}
 
-{% for server in servers %}
-++ {{ loop.index }}
+menu = {{ section }}
+title = {{ section }}
 
-menu = {{ server }}
-title = {{ server }}
-host = {{ server }}
+{% for server, hostname in servers %}
+++ {{ server }}
+
+menu = {{ hostname }}
+title = {{ hostname }}
+host = {{ hostname }}
 
 {% endfor %}
 
@@ -23,4 +26,4 @@ host = {{ server }}
 + All
 menu = All
 title = All
-host = {% for section, servers in sections.iteritems() %}{% for server in servers %} /{{ section }}/{{ loop.index }} {% endfor %}{% endfor %}
+host = {% for section, servers in sections.iteritems() %}{% for server, hostname in servers %} /{{ section }}/{{ server }} {% endfor %}{% endfor %}
