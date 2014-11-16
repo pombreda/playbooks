@@ -6,4 +6,4 @@
 - name: Set up targets
   template: src=Targets.j2 dest=/etc/smokeping/config.d/Targets
   notify:
-  - restart smokeping
+  - Restart smokeping
