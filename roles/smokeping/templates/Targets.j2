@@ -6,7 +6,7 @@ menu = Top
 title = {{ title }}
 remark = {{ remark }}
 
-{% for section, servers in sections.iteritems() %}
+{% for section, servers in sections|dictsort %}
 + {{ section }}
 
 menu = {{ section }}
@@ -26,4 +26,4 @@ host = {{ hostname }}
 + All
 menu = All
 title = All
-host = {% for section, servers in sections.iteritems() %}{% for server, hostname in servers %} /{{ section }}/{{ server }} {% endfor %}{% endfor %}
+host = {% for section, servers in sections|dictsort %}{% for server, hostname in servers %} /{{ section }}/{{ server }} {% endfor %}{% endfor %}
