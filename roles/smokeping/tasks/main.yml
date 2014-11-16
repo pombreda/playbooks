@@ -4,6 +4,6 @@
   apt: name=smokeping state=present
 
 - name: Set up targets
-  template: src=Targets.j2 dest=/etc/smokeping/config.d/Targets
+  template: src=Targets.j2 dest=/etc/smokeping/config.d/Targets mode=644
   notify:
   - Restart smokeping
