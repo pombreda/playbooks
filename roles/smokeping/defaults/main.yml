@@ -2,13 +2,3 @@
 
 title: Network Latency Grapher
 remark: Welcome to the SmokePing website of Martin Ueding.
-
-servers:
-- fritz.box
-- localhost
-- spiegel.de
-- unitymedia.de
-- chaos.stw-bonn.de
-- martin-ueding.de
-
-  # - {role: smokeping, servers: [fritz.box, localhost, spiegel.de, unitymedia.de, chaos.stw-bonn.de, martin-ueding.de]}
