@@ -5,15 +5,15 @@
   roles:
   - role: smokeping
     sections:
-      1-Internet:
+      Internet:
       - [martin-ueding, martin-ueding.de]
       - [chaos, chaos.stw-bonn.de]
       - [spiegel, spiegel.de]
       - [unitymedia, unitymedia.de]
       - [telekom-dns, 217.5.100.185]
-      2-Local:
-      - [Router, fritz.box]
+      Local:
       - [localhost, localhost]
+      - [Router, fritz.box]
  #- dev-programming
   - apt-cacher-server
   - mu-and-fs
