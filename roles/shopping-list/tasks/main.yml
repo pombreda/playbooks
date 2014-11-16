@@ -16,5 +16,5 @@
   args:
     chdir: /opt/shopping-list-site
 
-- name: Restart Apache
-  service: name=apache2 state=restarted
+  notify:
+  - Restart Apache
