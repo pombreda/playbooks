@@ -5,15 +5,15 @@
   roles:
   - role: smokeping
     sections:
+      Internet:
+      - [martin-ueding, martin-ueding.de]
+      - [chaos, chaos.stw-bonn.de]
+      - [spiegel, spiegel.de]
+      - [unitymedia, unitymedia.de]
       Local:
       - [Router, fritz.box]
       - [localhost, localhost]
-      Internet:
-      - [chaos, chaos.stw-bonn.de]
-      - [martin-ueding, martin-ueding.de]
-      - [spiegel, spiegel.de]
-      - [unitymedia, unitymedia.de]
-  - dev-programming
+        #- dev-programming
   - apt-cacher-server
   - mu-and-fs
   - shopping-list
