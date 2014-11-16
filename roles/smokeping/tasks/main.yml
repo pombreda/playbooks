@@ -1,1 +1,10 @@
- 
+# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install smokeping
+  apt: name=smokeping state=present
+
+- name: Set up targets
+  template: src=Targets.j2 dest=/etc/smokeping/config.d/Targets
+
+- name: Restart smokeping
+  service: name=smokeping state=restarted

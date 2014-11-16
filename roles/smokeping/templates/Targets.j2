@@ -1,0 +1,26 @@
+*** Targets ***
+
+probe = FPing
+
+menu = Top
+title = {{ title }}
+remark = {{ remark }}
+
+{% for section, servers in sections.iteritems() %}
++ {{ section }}
+
+{% for server in servers %}
+++ {{ loop.index }}
+
+menu = {{ server }}
+title = {{ server }}
+host = {{ server }}
+
+{% endfor %}
+
+{% endfor %}
+
++ All
+menu = All
+title = All
+host = {% for section, servers in sections.iteritems() %}{% for server in servers %} /{{ section }}/{{ loop.index }} {% endfor %}{% endfor %}

@@ -3,7 +3,17 @@
 - name: martin-gelderland
   hosts: martin-gelderland.local
   roles:
-  - apt-cacher-server
+  - role: smokeping
+    sections:
+      Local:
+      - fritz.box
+      - localhost
+      Internet:
+      - chaos.stw-bonn.de
+      - martin-ueding.de
+      - spiegel.de
+      - unitymedia.de
   - dev-programming
+  - apt-cacher-server
   - mu-and-fs
   - shopping-list
