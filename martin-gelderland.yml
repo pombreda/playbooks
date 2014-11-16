@@ -13,7 +13,7 @@
       Local:
       - [Router, fritz.box]
       - [localhost, localhost]
-        #- dev-programming
+ #- dev-programming
   - apt-cacher-server
   - mu-and-fs
   - shopping-list
