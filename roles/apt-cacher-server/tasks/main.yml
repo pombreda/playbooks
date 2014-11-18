@@ -2,5 +2,6 @@
 
 - name: Install apt-cacher-ng
   apt: pkg=apt-cacher-ng state=installed
+
 - name: Copy config file
-  template: src=01proxy-localhost dest=/etc/apt/apt.conf.d/01proxy
+  template: src=01proxy.j2 dest=/etc/apt/apt.conf.d/01proxy
