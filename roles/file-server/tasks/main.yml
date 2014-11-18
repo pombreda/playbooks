@@ -4,6 +4,6 @@
   apt: name=samba state=present
 
 - name: Install smb.conf
-  template: src=smb.conf.j2 dest=/etc/samba/smb.conf validate='testparm %s'
+  template: src=smb.conf.j2 dest=/etc/samba/smb.conf validate='testparm -s %s'
   notify:
   -  Restart samba
