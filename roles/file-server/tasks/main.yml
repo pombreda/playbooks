@@ -1,0 +1,4 @@
+# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install smb.conf
+  template: src=smb.conf.j2 dest=/etc/samba/smb.conf validate='testparm %s'
