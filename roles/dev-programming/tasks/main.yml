@@ -13,5 +13,6 @@
   - libboost-system-dev
   - libcppunit-dev
   - libeigen3-dev
+  - libopenmpi-dev
   - nvidia-cuda-dev
   - nvidia-cuda-toolkit
