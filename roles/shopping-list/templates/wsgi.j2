@@ -1,0 +1,12 @@
+# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+
+# {{ ansible_managed }}
+ 
+WSGIScriptAlias /shoppinglist /opt/shopping-list-site/shoppinglistsite/wsgi.py
+WSGIPythonPath /opt/shopping-list-site/
+
+<Directory /opt/shopping-list-site/shoppinglistsite/>
+        <Files wsgi.py>
+        Allow from all
+        </Files>
+</Directory>

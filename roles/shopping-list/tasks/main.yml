@@ -3,6 +3,11 @@
 - name: Install Apacke
   apt: name=apache2 state=present
 
+- name: Install WSGI script
+  template: src=wsgi.j2 dest=/etc/apache2/conf.d/shopping-list
+  notify:
+  - Restart Apache
+
 #- name:
 #  git: repo=https://github.com/martin-ueding/shopping-list-site.git dest=/opt/shopping-list-site
 
@@ -15,6 +20,5 @@
   command: git pull origin master
   args:
     chdir: /opt/shopping-list-site
-
   notify:
   - Restart Apache
