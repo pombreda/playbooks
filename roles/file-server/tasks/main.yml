@@ -5,3 +5,5 @@
 
 - name: Install smb.conf
   template: src=smb.conf.j2 dest=/etc/samba/smb.conf validate='testparm %s'
+  notify:
+  -  Restart samba
