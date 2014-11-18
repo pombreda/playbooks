@@ -16,3 +16,4 @@
   - libopenmpi-dev
   - nvidia-cuda-dev
   - nvidia-cuda-toolkit
+  - openmpi-bin
