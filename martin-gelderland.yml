@@ -3,6 +3,7 @@
 - name: martin-gelderland
   hosts: martin-gelderland.local
   roles:
+
   - role: smokeping
     sections:
       Internet:
@@ -14,7 +15,9 @@
       Local:
       - [localhost, localhost]
       - [Router, fritz.box]
+
  #- dev-programming
+  - file-server
   - apt-cacher-server
   - mu-and-fs
   - shopping-list
