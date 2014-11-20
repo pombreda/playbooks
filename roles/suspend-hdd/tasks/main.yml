@@ -4,4 +4,4 @@
   copy: src=suspend-usb-hdd dest=/usr/local/bin/ mode=755
 
 - name: Install cron job
-  template: src=cronjob.j2 dest=/etc/cron.d/ owner=root mode=600
+  template: src=cronjob.j2 dest=/etc/cron.d/suspend-usb-hdd owner=root mode=600

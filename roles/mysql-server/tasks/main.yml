@@ -1,0 +1,7 @@
+# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install MySQL server
+  apt: name=mysql-server state=present
+
+- name: Copy cron job
+  template: src=mysqldump.j2 dest=/etc/cron.d/mysqldump owner=root mode=600
