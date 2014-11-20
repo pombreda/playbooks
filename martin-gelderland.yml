@@ -23,3 +23,6 @@
   - file-server
   - mu-and-fs
   - shopping-list
+
+  vars:
+    mysql_root_password: 6fnPaotVjkV-N_8EKeZM
