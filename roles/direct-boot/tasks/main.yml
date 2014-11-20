@@ -1,7 +1,10 @@
 # Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
 
 - name: Insert line into /etc/default/grub
-  lineinfile: dest=/etc/default/grub regexp='^GRUB_TIMEOUT=' line='GRUB_TIMEOUT=0'
+  lineinfile: 
+    dest: /etc/default/grub
+    regexp: '^GRUB_TIMEOUT='
+    line: 'GRUB_TIMEOUT=0'
 
 - name: Update GRUB
   command: update-grub

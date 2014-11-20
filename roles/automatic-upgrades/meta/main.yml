@@ -1,3 +1,5 @@
+# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+
 dependencies:
 - role: jnv.unattended-upgrades
   when: ansible_distribution == "Ubuntu"
