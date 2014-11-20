@@ -1,0 +1,5 @@
+# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+
+5 0 * * * mysqldump -u root -p6fnPaotVjkV-N_8EKeZM --all-databases | gzip > /var/backups/mysql/$(date -u +%FT%T).sql.gz
+
+# vim: ft=crontab

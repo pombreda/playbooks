@@ -1,0 +1,26 @@
+#!/usr/bin/python3
+# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+
+import subprocess
+
+tuples = [
+    ('/dev/sda', '/extern/alpha'),
+]
+
+def is_used(mountpoint):
+    code = subprocess.call(['fuser', '-c', mountpoint])
+
+    return code == 0
+
+def suspend(device):
+    subprocess.check_call(['sg_start', '--stop', '--pc=2', device])
+
+def main():
+    for device, mountpoint in tuples:
+        print('Device {}, Mountpoint {}:'.format(device, mountpoint))
+        if not is_used(mountpoint):
+            print('Device is not used, suspending.')
+            suspend(device)
+
+if __name__ == '__main__':
+    main()
