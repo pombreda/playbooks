@@ -1,6 +1,6 @@
 # Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
 
-- name: Install Apacke
+- name: Install Apache
   apt: name=apache2 state=present
 
 - name: Install WSGI script

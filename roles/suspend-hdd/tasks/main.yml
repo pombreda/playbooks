@@ -1,6 +1,6 @@
 # Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
 
-- name: Install suspend-usb-hdd script
+- name: Copy suspend-usb-hdd script
   copy: src=suspend-usb-hdd dest=/usr/local/bin/ mode=755
 
 - name: Install cron job
