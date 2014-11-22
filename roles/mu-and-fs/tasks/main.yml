@@ -7,7 +7,7 @@
     password: ***REMOVED***
 
 - name: Add ***REMOVED***
-  user: >
+  user:
     name: fs
     comment: "***REMOVED***"
     password: ***REMOVED***
