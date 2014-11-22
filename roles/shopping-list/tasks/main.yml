@@ -8,17 +8,23 @@
   notify:
   - Restart Apache
 
-#- name:
-#  git: repo=https://github.com/martin-ueding/shopping-list-site.git dest=/opt/shopping-list-site
+- name: Create database configuration directory
+  file: path=/etc/shopping-list/ state=directory
 
-- name: Check out master branch
-  command: git checkout master
-  args:
-    chdir: /opt/shopping-list-site
+- name: Install database configuration file
+  template:
+    src: databases.js.j2
+    dest: /etc/shopping-list/databases.js
+    owner: www-data
+    group: www-data
+    mode: 0644
+  notify:
+  - Restart Apache
 
-- name: Pull latest changes
-  command: git pull origin master
-  args:
-    chdir: /opt/shopping-list-site
+- name: Checkout git repo
+  git:
+    repo: https://github.com/martin-ueding/shopping-list-site.git
+    dest: /opt/shopping-list-site
+    version: django-1.4
   notify:
   - Restart Apache
