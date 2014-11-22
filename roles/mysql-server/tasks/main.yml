@@ -4,4 +4,8 @@
   apt: name=mysql-server state=present
 
 - name: Copy cron job
-  template: src=mysqldump.j2 dest=/etc/cron.d/mysqldump owner=root mode=600
+  cron:
+    name: MySQL dump
+    job: 'mysqldump -u root -p{{ mysql_root_passwd }} --all-databases | gzip > /var/backups/mysql/$(date -u +%FT%T).sql.gz'
+    hour: 1
+    state: present
