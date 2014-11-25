@@ -5,6 +5,7 @@
   sudo: yes
   roles:
   - apt-cacher-client
+  - automatic-upgrades
   - dev-latex
   - dev-programming
   - mu-conf

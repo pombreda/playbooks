@@ -14,8 +14,9 @@
   hosts: frederike-lusitano.local
   sudo: yes
   roles:
-  - home-entertainment
   - apt-cacher-client
+  - automatic-upgrades
+  - home-entertainment
   - mu-and-fs
   - mu-conf
 
@@ -23,8 +24,9 @@
   hosts: martin-tinker.local
   sudo: yes
   roles:
-  - development
   - apt-cacher-client
+  - automatic-upgrades
+  - development
   - mu-and-fs
   - mu-conf
 
@@ -32,7 +34,8 @@
   hosts: martin-welsh.local
   sudo: yes
   roles:
-  - development
   - apt-cacher-client
+  - automatic-upgrades
+  - development
   - mu-and-fs
   - mu-conf
