@@ -25,5 +25,19 @@
   - shopping-list
   - mysql-server
 
+  - role: jnv.unattended-upgrades
+    unattended_origins_patterns:
+    - 'o=Raspbian,a=stable'
+    - 'o=Raspbian,a=stable-updates'
+    - 'o=Raspbian,a=proposed-updates'
+    - 'o=Raspbian,a=stable,label=Raspbian-Security'
+  
+    unattended_package_blacklist: []
+    unattended_autofix_interrupted_dpkg: true
+    unattended_minimal_steps: true
+    unattended_install_on_shutdown: false
+    unattended_remove_unused_dependencies: false
+    unattended_automatic_reboot: false
+
   vars:
     mysql_root_passwd: 6fnPaotVjkV-N_8EKeZM
