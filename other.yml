@@ -26,7 +26,6 @@
   roles:
   - apt-cacher-client
   - automatic-upgrades
-  - development
   - mu-and-fs
   - mu-conf
 
@@ -36,6 +35,5 @@
   roles:
   - apt-cacher-client
   - automatic-upgrades
-  - development
   - mu-and-fs
   - mu-conf
