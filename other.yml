@@ -1,39 +1,31 @@
 # Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
 
+- name: Other towers
+  hosts:
+  - frederike-lusitano.local
+  - martin-tinker.local
+  - martin-welsh.local
+  sudo: yes
+  roles:
+  - role: apt-cacher-client
+    state: absent
+  - automatic-upgrades
+  - mu-and-fs
+  - mu-conf
+
+- name: Home entertainment
+  hosts:
+  - frederike-lusitano.local
+  sudo: yes
+  roles:
+  - home-entertainment
+
 - name: Debian VMs
   hosts:
   - martin-stable.local
   - martin-unstable.local
-  sudo: yes
   roles:
-  - apt-cacher-client
+  - role: apt-cacher-client
+    state: absent
   - dev-programming
   - mu-and-fs
-
-- name: frederike-lusitano
-  hosts: frederike-lusitano.local
-  sudo: yes
-  roles:
-  - apt-cacher-client
-  - automatic-upgrades
-  - home-entertainment
-  - mu-and-fs
-  - mu-conf
-
-- name: martin-tinker
-  hosts: martin-tinker.local
-  sudo: yes
-  roles:
-  - apt-cacher-client
-  - automatic-upgrades
-  - mu-and-fs
-  - mu-conf
-
-- name: martin-welsh
-  hosts: martin-welsh.local
-  sudo: yes
-  roles:
-  - apt-cacher-client
-  - automatic-upgrades
-  - mu-and-fs
-  - mu-conf
