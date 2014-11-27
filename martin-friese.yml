@@ -4,7 +4,8 @@
   hosts: localhost
   sudo: yes
   roles:
-  - apt-cacher-client
+  - role: apt-cacher-client
+    state: absent
   - automatic-upgrades
   - dev-latex
   - dev-programming
