@@ -29,7 +29,7 @@
   notify:
   - Restart Apache
 
-- name: Checkout git repo
-  command: python manage.py collectstatic
+- name: Copy static files
+  command: python manage.py collectstatic --noinput
   args:
     chdir: /opt/shopping-list-site
