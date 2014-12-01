@@ -1,0 +1,7 @@
+# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+
+- name: Enable ufw
+  ufw: state=enabled policy=reject
+
+- name: Allow ssh
+  ufw: rule=allow port=ssh proto=tcp
