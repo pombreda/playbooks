@@ -1,0 +1,10 @@
+# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+
+- name: Purge apt-cacher-ng
+  apt: pkg=apt-cacher-ng state=absent purge=yes
+
+- name: Remove configuration file
+  file: dest=/etc/apt/apt.conf.d/01proxy state=absent
+
+- name: Remove cache files
+  file: dest=/var/cache/apt-cacher-ng/ state=absent

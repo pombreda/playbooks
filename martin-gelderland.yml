@@ -3,7 +3,8 @@
 - name: martin-gelderland
   hosts: martin-gelderland.local
   roles:
-  - apt-cacher-server
+  - role: apt-cacher-server
+    state: absent
 
   - suspend-hdd
 
