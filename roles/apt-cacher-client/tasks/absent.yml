@@ -1,0 +1,5 @@
+# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+
+- name: Remove config file
+  when: ansible_os_family == "Debian"
+  file: dest=/etc/apt/apt.conf.d/01proxy state=absent

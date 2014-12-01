@@ -1,9 +1,9 @@
 # Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
 
-- name: Copy config file
-  when: ansible_os_family == "Debian" and state == 'present'
-  template: src=01proxy.j2 dest=/etc/apt/apt.conf.d/01proxy
+- name: Make present
+  when: state == 'present'
+  include: present.yml
 
-- name: Remove config file
-  when: ansible_os_family == "Debian" and state == 'absent'
-  file: dest=/etc/apt/apt.conf.d/01proxy state=absent
+- name: Make absent
+  when: state == 'absent'
+  include: absent.yml
