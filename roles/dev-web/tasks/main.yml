@@ -5,6 +5,7 @@
   with_items:
 
   - apache2
+  - filezilla
   - libapache2-mod-php5
   - mysql-server
   - php5-mysql
