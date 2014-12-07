@@ -7,6 +7,7 @@
   roles:
   - automatic-upgrades
   - mu-conf
+  - mu-conf-main
 
   tasks:
   - name: Install lubuntu-desktop
