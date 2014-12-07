@@ -15,7 +15,6 @@
   - backup-scripts
   - bogomips
   - enigmail
-  - filezilla
   - firefox
   - fish
   - gstreamer0.10-plugins-bad
@@ -23,7 +22,6 @@
   - hardinfo
   - htop
   - imagemagick
-  - inkscape
     #- kde-wallpapers
     #- kdewallpapers
   - konversation
@@ -44,7 +42,6 @@
   - vlc
   - vnstat
   - xournal
-  - youtube-dl
 
 - name: Remove Amazon Shopping Lens
   apt: name=unity-webapps-common state=absent purge=yes

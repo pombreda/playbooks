@@ -1,0 +1,13 @@
+# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+
+- name: Other towers
+  hosts:
+  - martin-exmoor.local
+  sudo: yes
+  roles:
+  - automatic-upgrades
+  - mu-conf
+
+  tasks:
+  - name: Install lubuntu-desktop
+    apt: pkg=lubuntu-desktop state=installed
