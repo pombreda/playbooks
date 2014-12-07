@@ -1,6 +1,6 @@
 # Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
 
-- name: Other towers
+- name: martin-exmoor
   hosts:
   - martin-exmoor.local
   sudo: yes
