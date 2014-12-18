@@ -49,6 +49,7 @@
     dest: /var/log/radicale/radicale.log
     owner: radicale
     group: radicale
+    force: no
 
 - name: Enable radicale on system startup
   lineinfile:
