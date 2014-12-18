@@ -10,7 +10,7 @@
   htpasswd:
     create: yes
     name: mu
-    password: test
+    password: '{{ password_mu_radicale }}'
     path: '{{ htpasswd_filename }}'
     crypt_scheme: des_crypt
   notify:
