@@ -22,3 +22,33 @@
     group: root
   notify:
   - Restart radicale
+
+- name: Install logging file
+  template:
+    src: logging.j2
+    dest: /etc/radicale/logging
+    mode: 0644
+    owner: root
+    group: root
+  notify:
+  - Restart radicale
+
+- name: Create log directoy
+  file:
+    path: /var/log/radicale/
+    state: directory
+    owner: radicale
+    group: radicale
+
+- name: Create log file
+  copy:
+    src: radicale.log
+    dest: /var/log/radicale/radicale.log
+    owner: radicale
+    group: radicale
+
+- name: Enable radicale on system startup
+  lineinfile:
+    dest: /etc/default/radicale
+    regexp: 'ENABLE_RADICALE'
+    line: 'ENABLE_RADICALE=yes'
