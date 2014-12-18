@@ -1,0 +1,10 @@
+# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+
+- name: martin-stable
+  hosts:
+  - martin-stable.local
+  roles:
+  - role: apt-cacher-client
+    state: absent
+  - mu-and-fs
+  - radicale

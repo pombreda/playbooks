@@ -38,7 +38,7 @@ stock = utf-8
 [acl]
 # Access method
 # Value: None | htpasswd | LDAP | PAM | courier
-type = PAM
+type = htpasswd
 
 # Usernames used for public collections, separated by a comma
 #public_users = public
@@ -46,10 +46,10 @@ type = PAM
 #private_users = private
 
 # Htpasswd filename
-#htpasswd_filename = /etc/radicale/users
+htpasswd_filename = {{ htpasswd_filename }}
 # Htpasswd encryption method
 # Value: plain | sha1 | crypt
-#htpasswd_encryption = crypt
+htpasswd_encryption = crypt
 
 # LDAP server URL, with protocol and port
 #ldap_url = ldap://localhost:389/

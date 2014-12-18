@@ -3,20 +3,15 @@
 - name: Install radicale
   apt: name=radicale state=installed
 
-- name: Install python-pam
-  apt: name=python-pam state=installed
+- name: Install python-passlib
+  apt: name=python-passlib state=installed
 
-- name: Create first link from PAM to pam
-  file:
-    path: /usr/lib/python2.7/dist-packages/pammodule.so
-    src: /usr/lib/python2.7/dist-packages/PAMmodule.so
-    state: link
-
-- name: Create second link from PAM to pam
-  file:
-    path: /usr/lib/pyshared/python2.7/pammodule.so
-    src: /usr/lib/pyshared/python2.7/PAMmodule.so
-    state: link
+- name: Create user mu
+  htpasswd:
+    create: yes
+    name: mu
+    password: test
+    path: '{{ htpasswd_filename }}'
 
 - name: Install configuration file
   template:

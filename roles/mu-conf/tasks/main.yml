@@ -1,9 +1,9 @@
 # Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
 
 - name: Add PPA martin-ueding/stable
-  apt_repository: >
-      repo='ppa:martin-ueding/stable'
-      state=present
+  apt_repository:
+   repo: 'deb http://ppa.launchpad.net/martin-ueding/stable/ubuntu trusty main '
+   state: present
 
 - name: Install packages
   action: apt pkg={{ item }} state=installed
