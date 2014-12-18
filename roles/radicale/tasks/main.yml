@@ -1,0 +1,9 @@
+# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install configuration file
+  template:
+    src: config.j2
+    dest: /etc/radicale/config
+    mode: 0644
+    owner: root
+    group: root
