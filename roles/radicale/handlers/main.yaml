@@ -1,4 +1,4 @@
 # Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
 
 - name: Restart radicale
-  service: name=radicale status=restarted
+  service: name=radicale state=restarted

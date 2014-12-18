@@ -3,6 +3,8 @@
 - name: martin-gelderland
   hosts: martin-gelderland.local
   roles:
+  - radicale
+
   - role: apt-cacher-server
     state: absent
 
