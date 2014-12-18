@@ -8,6 +8,7 @@ dependencies:
   - 'origin=Ubuntu,archive=${distro_codename}-security,label=Ubuntu'
   - 'origin=Ubuntu,archive=${distro_codename}-proposed,label=Ubuntu'
   - 'origin=Ubuntu,archive=${distro_codename}-backports,label=Ubuntu'
+  - 'o=LP-PPA-martin-ueding-stable,a=${distro_codename},n=${distro_codename},l=stable,c=main'
   unattended_package_blacklist: []
   unattended_autofix_interrupted_dpkg: true
   unattended_minimal_steps: true
