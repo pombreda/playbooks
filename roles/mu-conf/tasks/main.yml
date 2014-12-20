@@ -5,6 +5,9 @@
    repo: 'deb http://ppa.launchpad.net/martin-ueding/stable/ubuntu trusty main '
    state: present
 
+- name: Add PPA key
+  apt_key: keyserver=keyserver.ubuntu.com id=C5CFA3AAA5D0684F00BB51B63EDBAED80634404F
+
 - name: Install packages
   action: apt pkg={{ item }} state=installed
   with_items:

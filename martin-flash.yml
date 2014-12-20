@@ -1,0 +1,11 @@
+# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+
+- name: martin-flash
+  hosts:
+  - martin-flash.local
+  sudo: yes
+  roles:
+  - mu-conf
+  - automatic-upgrades
+  - dev-common
+  - mu-and-fs
