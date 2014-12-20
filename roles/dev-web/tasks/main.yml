@@ -10,6 +10,7 @@
   - mysql-server
   - php5-mysql
   - python-django
+  - ruby-sass
 
 - name: Create MySQL database
   mysql_db: >
