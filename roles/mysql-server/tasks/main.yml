@@ -6,6 +6,6 @@
 - name: Copy cron job
   cron:
     name: MySQL dump
-    job: 'mysqldump -u root -p{{ mysql_root_passwd }} --all-databases | gzip > /var/backups/mysql/$(date -u +%FT%T).sql.gz'
+    job: '/usr/bin/mysqldump -u root -p{{ mysql_root_passwd }} --all-databases | gzip > /var/backups/mysql/$(date -u +%FT%T).sql.gz'
     hour: 1
     state: present

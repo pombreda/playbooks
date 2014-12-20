@@ -29,9 +29,11 @@
   - role: shopping-list
     tags: shopping-list
 
-  - mysql-server
+  - role: mysql-server
+    tags: mysql
 
-  - gelderland-backup
+  - role: gelderland-backup
+    tags: backup
 
   - role: jnv.unattended-upgrades
     unattended_origins_patterns:
