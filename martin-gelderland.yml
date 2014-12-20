@@ -31,6 +31,8 @@
 
   - mysql-server
 
+  - gelderland-backup
+
   - role: jnv.unattended-upgrades
     unattended_origins_patterns:
     - 'o=Raspbian,a=stable'
@@ -44,6 +46,3 @@
     unattended_install_on_shutdown: false
     unattended_remove_unused_dependencies: false
     unattended_automatic_reboot: false
-
-  vars:
-    mysql_root_passwd: 6fnPaotVjkV-N_8EKeZM
