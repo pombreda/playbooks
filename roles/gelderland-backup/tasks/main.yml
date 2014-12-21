@@ -10,6 +10,7 @@
   cron:
     name: Gelderland Backup
     job: '/usr/bin/gelderland-backup'
+    minute: 0
     hour: 16
     weekday: 0
     state: present
