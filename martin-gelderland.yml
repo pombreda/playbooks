@@ -29,6 +29,9 @@
   - role: shopping-list
     tags: shopping-list
 
+  - role: apache-with-ssl
+    tags: apache
+
   - role: mysql-server
     tags: mysql
 

@@ -1,0 +1,28 @@
+# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install Apache
+  apt: name=apache2 state=present
+
+#- name: Generate key
+#  command: openssl genrsa -out /etc/ssl/private/apache.key 2048
+#  args:
+#    creates: /etc/ssl/private/apache.key
+#  notify:
+#  - Restart Apache
+#
+#- name: Generate certificate
+#  command: openssl req -new -x509 -key /etc/ssl/private/apache.key -days 365 -sha256 -out /etc/ssl/certs/apache.crt -batch
+#  args:
+#    creates: /etc/ssl/certs/apache.crt
+#  notify:
+#  - Restart Apache
+
+- name: Activate Apache SSL module
+  apache2_module: name=ssl state=present
+  notify:
+  - Restart Apache
+
+- name: Enable default-ssl site
+  command: a2ensite default-ssl
+  args:
+    creates: /etc/apache2/sites-enabled/default-ssl
