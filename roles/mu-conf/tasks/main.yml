@@ -12,6 +12,10 @@
   action: apt pkg={{ item }} state=installed
   with_items:
 
+    #- kde-wallpapers
+    #- kdewallpapers
+    #- ubuntu-gnome-wallpapers
+    #- ubuntu-wallpapers
   - apt-file
   - awesome
   - awesome-extra
@@ -25,8 +29,7 @@
   - hardinfo
   - htop
   - imagemagick
-    #- kde-wallpapers
-    #- kdewallpapers
+  - k4dirstat
   - konversation
   - legacy-file-formats
   - lock-and-off
@@ -38,8 +41,6 @@
   - task
   - thunderbird-locale-de
   - tree
-    #- ubuntu-gnome-wallpapers
-    #- ubuntu-wallpapers
   - unwrap-pdf-to-jpeg
   - vim
   - vlc

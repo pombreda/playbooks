@@ -7,6 +7,7 @@
   - clang
   - cmake
   - debhelper
+  - doxygen
   - g++
   - libboost-filesystem-dev
   - libboost-program-options-dev
