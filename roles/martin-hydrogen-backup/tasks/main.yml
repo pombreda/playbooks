@@ -14,6 +14,11 @@
     line: 'martin-hydrogen UUID=bcf0fd62-917b-49bb-9504-65e90ffb547f /etc/keyfiles/martin-hydrogen luks,discard'
     state: present
 
+- name: Create mount point
+  file:
+    path: /mnt/martin-hydrogen
+    state: directory
+
 - name: Line into fstab
   lineinfile:
     dest: /etc/fstab
