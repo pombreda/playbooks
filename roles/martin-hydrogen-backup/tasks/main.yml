@@ -1,0 +1,29 @@
+# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+
+- name: Assert existence of key file
+  file:
+    path: /etc/keyfiles/martin-hydrogen
+    owner: root
+    group: root
+    mode: 0400
+    state: file
+
+- name: Line into crypttab
+  lineinfile:
+    dest: /etc/crypttab
+    line: 'martin-hydrogen UUID=bcf0fd62-917b-49bb-9504-65e90ffb547f /etc/keyfiles/martin-hydrogen luks,discard'
+    state: present
+
+- name: Line into fstab
+  lineinfile:
+    dest: /etc/fstab
+    line: '/dev/mapper/martin-hydrogen /mnt/martin-hydrogen btrfs defaults 0 2'
+    state: present
+
+- name: Create cron job
+  cron:
+    name: martin-hydrogen backup
+    special_time: hourly
+    state: present
+    job: backup-external martin-hydrogen
+    user: mu
