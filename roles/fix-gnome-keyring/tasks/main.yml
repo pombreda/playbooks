@@ -11,3 +11,9 @@
     dest: /etc/xdg/autostart/gnome-keyring-gpg.desktop
     line: X-GNOME-Autostart-enabled=false
     state: present
+
+- name: Disable autostart in KDE
+  lineinfile:
+    dest: /etc/xdg/autostart/gnome-keyring-gpg.desktop
+    line: X-KDE-Autostart-enabled=false
+    state: present
