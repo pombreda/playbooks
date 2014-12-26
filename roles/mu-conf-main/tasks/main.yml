@@ -17,6 +17,7 @@
   - uni-tools
   - viking
   - whois
+  - zbar-tools
 
 - name: Install thinkpad-scripts
   when: ansible_product_version | search('ThinkPad')
