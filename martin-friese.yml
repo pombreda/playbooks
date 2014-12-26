@@ -4,6 +4,7 @@
   hosts: localhost
   sudo: yes
   roles:
+  - fix-gnome-keyring
   - role: apt-cacher-client
     state: absent
   - automatic-upgrades

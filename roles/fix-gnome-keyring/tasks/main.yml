@@ -1,0 +1,13 @@
+# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+
+- name: Remove nodisplay line
+  lineinfile:
+    dest: /etc/xdg/autostart/gnome-keyring-gpg.desktop
+    line: NoDisplay=true
+    state: absent
+
+- name: Disable autostart in GNOME
+  lineinfile:
+    dest: /etc/xdg/autostart/gnome-keyring-gpg.desktop
+    line: X-GNOME-Autostart-enabled=false
+    state: present
