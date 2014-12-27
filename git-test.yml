@@ -2,5 +2,7 @@
  
 - hosts:
   - localhost
+  - df
+  - martin-gelderland.local
   roles:
   - facts
