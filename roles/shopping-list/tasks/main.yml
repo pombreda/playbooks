@@ -33,3 +33,5 @@
   command: python manage.py collectstatic --noinput
   args:
     chdir: /opt/shopping-list-site
+
+# TODO Add MySQL user
