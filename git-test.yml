@@ -2,9 +2,5 @@
  
 - hosts:
   - localhost
-  tasks:
-  - name: Clone git repo
-    git:
-      repo: https://github.com/martin-ueding/shopping-list-site.git
-      dest: /tmp/shopping-list
-      version: django-1.4
+  roles:
+  - facts
