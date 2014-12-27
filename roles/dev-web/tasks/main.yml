@@ -13,11 +13,17 @@
   - ruby-sass
 
 - name: Create MySQL database
-  mysql_db: >
-      name=develop state=present
-      login_user=root login_password=""
+  mysql_db:
+    name: develop
+    state: present
+    login_user: root
+    login_password: ""
 
 - name: Create MySQL user
-  mysql_user: >
-      name=develop password=develop state=present priv=develop.*:ALL,GRANT
-      login_user=root login_password=""
+  mysql_user:
+    name: develop
+    password: develop
+    state: present
+    priv: develop.*:ALL,GRANT
+    login_user: root
+    login_password: ""
