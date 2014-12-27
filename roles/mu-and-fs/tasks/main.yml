@@ -1,7 +1,8 @@
 # Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
 
-- name: Add Martin Ueding
+- name: Add users
   user:
-    name: mu
-    comment: "Martin Ueding"
-    password: x
+    name: '{{ item.name }}'
+    comment: '{{ item.comment }}'
+    password: '{{ item.hash }}'
+  with_items: linux_users
