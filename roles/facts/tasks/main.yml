@@ -1,12 +1,12 @@
 # Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
 
 - name: Write JSON template
-  local_action: template src=setup.js.j2 dest=/tmp/{{ ansible_hostname }}.js owner=mu group=mu
+  local_action: template src=setup.js.j2 dest=/tmp/ansible-setup_{{ ansible_hostname }}.js owner=mu group=mu
 
 - name: Write reST template
-  local_action: template src=setup.rst.j2 dest=/tmp/{{ ansible_hostname }}.rst owner=mu group=mu
+  local_action: template src=setup.rst.j2 dest=/tmp/ansible-setup_{{ ansible_hostname }}.rst owner=mu group=mu
 
 - name: Compile reST to HTML
-  local_action: command rst2html /tmp/{{ ansible_hostname }}.rst /tmp/{{ ansible_hostname }}.html
+  local_action: command rst2html /tmp/ansible-setup_{{ ansible_hostname }}.rst /tmp/ansible-setup_{{ ansible_hostname }}.html
   args:
-    creates: /tmp/{{ ansible_hostname }}.html
+    creates: /tmp/ansible-setup_{{ ansible_hostname }}.html
