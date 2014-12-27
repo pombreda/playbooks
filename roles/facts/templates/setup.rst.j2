@@ -10,22 +10,27 @@ Model
     Virtual Machine ({{ ansible_virtualization_type }})
     {% endif %}
 
+{% if ansible_processor is defined %}
 CPUs
     {% for cpu in ansible_processor -%}
     - {{ cpu }}
     {% endfor %}
+{% endif %}
 
 Architecture
     {{ ansible_architecture }}
 
+{% if ansible_memtotal_mb is defined %}
 RAM
     {{ ansible_memtotal_mb }} MB
+{% endif %}
 
-{% if ansible_swaptotal_mb|int > 0 %}
+{% if ansible_swaptotal_mb is defined and ansible_swaptotal_mb|int > 0 %}
 Swap:
     {{ ansible_swaptotal_mb }} MB
 {% endif %}
 
+{% if ansible_devices|length > 0 %}
 Mass Storage
     .. list-table::
         :header-rows: 1
@@ -35,6 +40,7 @@ Mass Storage
           - Size
           - Rotational
           - Removable
+          - Support discard
 
         {% for device, device_info in ansible_devices.iteritems() -%}
         - - {{ device }}
@@ -42,10 +48,40 @@ Mass Storage
           - {{ device_info.size }}
           - {{ device_info.rotational }}
           - {{ device_info.removable }}
+          - {{ device_info.support_discard }}
         {% endfor %}
+{% endif %}
+
+{% if ansible_mounts|length > 0 %}
+Mass Storage
+    .. list-table::
+        :header-rows: 1
+
+        - - Mountpoint
+          - Device
+          - Filesystem
+          - Size available / GiB
+          - Size total / GiB
+          - Used / %
+
+        {% for mount in ansible_mounts -%}
+        - - {{ mount.mount }}
+          - {{ mount.device }}
+          - {{ mount.fstype }}
+          - {{ (mount.size_available / (1024**3))|round(1) }}
+          - {{ (mount.size_total / (1024**3))|round(1) }}
+          - {{ ((1 - mount.size_available / mount.size_total) * 100)|round(1) }}
+        {% endfor %}
+{% endif %}
 
 OS
     {{ ansible_distribution }} {{ ansible_distribution_version }} {{ ansible_distribution_release }}
+
+OS Family
+    {{ ansible_os_family }}
+
+Package manager
+    {{ ansible_pkg_mgr }}
 
 Kernel
     {{ ansible_kernel }}

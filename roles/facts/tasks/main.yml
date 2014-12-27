@@ -8,5 +8,3 @@
 
 - name: Compile reST to HTML
   local_action: command rst2html /tmp/ansible-setup_{{ ansible_hostname }}.rst /tmp/ansible-setup_{{ ansible_hostname }}.html
-  args:
-    creates: /tmp/ansible-setup_{{ ansible_hostname }}.html
