@@ -12,10 +12,6 @@
   action: apt pkg={{ item }} state=installed
   with_items:
 
-    #- kde-wallpapers
-    #- kdewallpapers
-    #- ubuntu-gnome-wallpapers
-    #- ubuntu-wallpapers
   - apt-file
   - awesome
   - awesome-extra
