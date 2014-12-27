@@ -4,10 +4,12 @@
   user:
     name: mu
     comment: "Martin Ueding"
+        # XXX This hash should be private
     password: ***REMOVED***
 
 - name: Add ***REMOVED***
   user:
     name: fs
     comment: "***REMOVED***"
+        # XXX This hash should be private
     password: ***REMOVED***
