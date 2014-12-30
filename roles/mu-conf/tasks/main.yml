@@ -50,6 +50,3 @@
 
 - name: Set shell to fish
   user: name=mu shell=/usr/bin/fish
-
-- name: Remove Flash Player
-  apt: name=flashplugin-installer state=absent purge=yes
