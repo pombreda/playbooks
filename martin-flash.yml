@@ -9,3 +9,5 @@
   - automatic-upgrades
   - dev-common
   - mu-and-fs
+  - role: flash
+    state: present

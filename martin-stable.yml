@@ -8,3 +8,5 @@
     state: absent
   - mu-and-fs
   - radicale
+  - role: flash
+    state: absent

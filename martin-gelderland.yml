@@ -51,3 +51,6 @@
     unattended_install_on_shutdown: false
     unattended_remove_unused_dependencies: false
     unattended_automatic_reboot: false
+
+  - role: flash
+    state: absent

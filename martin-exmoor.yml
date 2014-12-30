@@ -8,6 +8,8 @@
   - automatic-upgrades
   - mu-conf
   - mu-conf-main
+  - role: flash
+    state: absent
 
   tasks:
   - name: Install lubuntu-desktop

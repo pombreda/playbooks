@@ -11,6 +11,8 @@
   - automatic-upgrades
   - mu-and-fs
   - mu-conf
+  - role: flash
+    state: absent
 
 - name: Debian VMs
   hosts:
@@ -21,3 +23,5 @@
     state: absent
   - dev-programming
   - mu-and-fs
+  - role: flash
+    state: absent

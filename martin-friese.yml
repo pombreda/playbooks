@@ -13,3 +13,5 @@
   - mu-conf
   - mu-conf-main
   - martin-hydrogen-backup
+  - role: flash
+    state: absent
