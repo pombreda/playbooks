@@ -2,7 +2,6 @@
 
 - name: Other towers
   hosts:
-  - frederike-lusitano.local
   - martin-tinker.local
   - martin-welsh.local
   sudo: yes
@@ -12,13 +11,6 @@
   - automatic-upgrades
   - mu-and-fs
   - mu-conf
-
-- name: Home entertainment
-  hosts:
-  - frederike-lusitano.local
-  sudo: yes
-  roles:
-  - home-entertainment
 
 - name: Debian VMs
   hosts:

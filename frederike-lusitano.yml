@@ -1,0 +1,14 @@
+- name: frederike-lusitano
+  hosts:
+  - frederike-lusitano.local
+  sudo: yes
+  roles:
+  - home-entertainment
+  - role: flash
+    state: present
+
+  - role: apt-cacher-client
+    state: absent
+  - automatic-upgrades
+  - mu-and-fs
+  - mu-conf

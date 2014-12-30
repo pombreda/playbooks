@@ -1,4 +1,4 @@
 # Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
 
 - name: Remove Flash Player
-  apt: name=flashplugin-installer state=absent purge=yes
+  apt: name=flashplugin-installer state={{ state }} purge=yes
