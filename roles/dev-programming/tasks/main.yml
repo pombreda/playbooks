@@ -1,4 +1,4 @@
-# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+# Copyright © 2014-2015 Martin Ueding <dev@martin-ueding.de>
 
 - name: Install programming packages
   action: apt name={{ item }} state=installed
@@ -15,6 +15,7 @@
   - libcppunit-dev
   - libeigen3-dev
   - libopenmpi-dev
+  - ninja-build
   - nvidia-cuda-dev
   - nvidia-cuda-toolkit
   - openmpi-bin
