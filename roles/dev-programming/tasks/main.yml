@@ -5,6 +5,7 @@
   with_items:
 
   - clang
+  - clang-format-3.5
   - cmake
   - debhelper
   - doxygen
