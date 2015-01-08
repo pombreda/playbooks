@@ -1,0 +1,12 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install Ansible
+  apt: name=ansible state=present
+
+- name: Install Ansible roles
+  command: ansible-galaxy install {{ item }}
+  args:
+    creates: /etc/ansible/roles/{{ item }}
+  with_items:
+  - jnv.unattended-upgrades
+  - franklinkim.vsftpd
