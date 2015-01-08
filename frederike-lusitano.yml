@@ -12,3 +12,14 @@
   - automatic-upgrades
   - mu-and-fs
   - mu-conf
+
+  tasks:
+  - name: Add user account for watching
+    user: name=watching state=present
+
+  - name: Set `watching` to be automatically logged in
+    ini:
+      dest: /etc/lightdm/lightdm.conf
+      section: SeatDefaults
+      option: autologin-user
+      value: watching
