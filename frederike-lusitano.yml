@@ -31,3 +31,10 @@
       section: SeatDefaults
       option: autologin-user
       value: watching
+
+  - name: Set `watching` to use Lubuntu
+    ini_file:
+      dest: /etc/lightdm/lightdm.conf
+      section: SeatDefaults
+      option: user-session
+      value: Lubuntu
