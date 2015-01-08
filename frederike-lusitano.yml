@@ -26,7 +26,7 @@
       state: present
 
   - name: Set `watching` to be automatically logged in
-    ini:
+    ini_file:
       dest: /etc/lightdm/lightdm.conf
       section: SeatDefaults
       option: autologin-user
