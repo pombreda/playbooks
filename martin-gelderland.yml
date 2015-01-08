@@ -1,10 +1,15 @@
-# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+# Copyright © 2014-2015 Martin Ueding <dev@martin-ueding.de>
 
 - name: martin-gelderland
   hosts: martin-gelderland.local
   roles:
+  - role: franklinkim.vsftpd
+    vsftpd_config:
+      local_enable: YES
+      write_enable: YES
+      ftpd_banner: Welcome to martin-gelderland FTP service.
+
   - role: radicale
-    tags: caldav
 
   - role: apt-cacher-server
     state: absent
@@ -23,20 +28,15 @@
       - [localhost, localhost]
       - [Router, fritz.box]
 
- #- dev-programming
   - file-server
   - mu-and-fs
   - role: shopping-list
-    tags: shopping-list
 
   - role: apache-with-ssl
-    tags: apache
 
   - role: mysql-server
-    tags: mysql
 
   - role: gelderland-backup
-    tags: backup
 
   - role: jnv.unattended-upgrades
     unattended_origins_patterns:
