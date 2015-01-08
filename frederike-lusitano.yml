@@ -25,7 +25,7 @@
       key: "{{ lookup('file', '/home/mu/.ssh/id_rsa.pub') }}"
       state: present
 
-  - name: Set `watching` to be automatically logged in
+  - name: Set `watching` to be logged in automatically
     ini_file:
       dest: /etc/lightdm/lightdm.conf
       section: SeatDefaults
