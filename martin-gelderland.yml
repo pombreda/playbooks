@@ -54,3 +54,10 @@
 
   - role: flash
     state: absent
+
+  tasks:
+  - name: Add user account for `zocker`
+    user:
+      name: zocker
+      password: '{{ zocker_password_hash }}'
+      state: present
