@@ -1,8 +1,8 @@
 # Copyright © 2014-2015 Martin Ueding <dev@martin-ueding.de>
 
-- name: Other towers
+- name: martin-welsh
   hosts:
-  - martin-tinker.local
+  - martin-welsh.local
   sudo: yes
   roles:
   - role: apt-cacher-client
@@ -10,17 +10,6 @@
   - automatic-upgrades
   - mu-and-fs
   - mu-conf
-  - role: flash
-    state: absent
-
-- name: Debian VMs
-  hosts:
-  - martin-stable.local
-  - martin-unstable.local
-  roles:
-  - role: apt-cacher-client
-    state: absent
   - dev-programming
-  - mu-and-fs
   - role: flash
     state: absent
