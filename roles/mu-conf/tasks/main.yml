@@ -1,14 +1,10 @@
 # Copyright © 2014-2015 Martin Ueding <dev@martin-ueding.de>
 
-- name: Add PPA key
-  apt_key:
-    keyserver: keyserver.ubuntu.com
-    id: C5CFA3AAA5D0684F00BB51B63EDBAED80634404F
-
 - name: Add PPA martin-ueding/stable
   apt_repository:
-   repo: 'deb http://ppa.launchpad.net/martin-ueding/stable/ubuntu {{ ansible_distribution_release }} main '
-   state: present
+    repo: 'ppa:martin-ueding/stable'
+    state: present
+  when: ansible_distribution == "Ubuntu"
 
 - name: Install packages
   action: apt pkg={{ item }} state=installed
