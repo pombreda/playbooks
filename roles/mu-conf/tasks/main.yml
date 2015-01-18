@@ -1,48 +1,23 @@
 # Copyright © 2014-2015 Martin Ueding <dev@martin-ueding.de>
 
-- name: Add PPA martin-ueding/stable
-  apt_repository:
-    repo: 'ppa:martin-ueding/stable'
-    state: present
-  when: ansible_distribution == "Ubuntu"
-
 - name: Install packages
   action: apt pkg={{ item }} state=installed
   with_items:
 
-  - apt-file
   - awesome
   - awesome-extra
-  - backup-scripts
-  - bogomips
   - enigmail
   - firefox
-  - fish
   - gstreamer0.10-plugins-bad
-  - gufw
-  - hardinfo
-  - htop
   - imagemagick
   - k4dirstat
   - konversation
-  - legacy-file-formats
   - lock-and-off
-  - maintenance
   - pavucontrol
   - pinentry-qt4
-  - python3-termcolor
-  - qrencode
-  - task
   - thunderbird-locale-de
-  - tree
-  - unwrap-pdf-to-jpeg
-  - vim
   - vlc
-  - vnstat
   - xournal
 
 - name: Remove Amazon Shopping Lens
   apt: name=unity-webapps-common state=absent purge=yes
-
-- name: Set shell to fish
-  user: name=mu shell=/usr/bin/fish

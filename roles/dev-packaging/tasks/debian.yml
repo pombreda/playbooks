@@ -1,0 +1,10 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Debian
+  action: apt name={{ item }} state=installed
+  with_items:
+
+  - debhelper
+  - devscripts
+  - dh-make
+  - dbconfig-common

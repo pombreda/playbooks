@@ -1,0 +1,36 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install packages
+  action: apt pkg={{ item }} state=installed
+  with_items:
+
+  - apt-file
+  - gufw
+  - hardinfo
+  - htop
+  - qrencode
+  - tree
+  - vim
+  - vnstat
+
+- name: Add PPA martin-ueding/stable
+  apt_repository:
+    repo: 'ppa:martin-ueding/stable'
+    state: present
+  when: ansible_distribution == "Ubuntu"
+
+- name: Install Ubuntu specific packages
+  when: ansible_distribution == "Ubuntu"
+  action: apt pkg={{ item }} state=installed
+  with_items:
+
+  - bogomips
+  - fish
+  - legacy-file-formats
+  - maintenance
+  - python3-termcolor
+  - unwrap-pdf-to-jpeg
+
+- name: Set shell to fish
+  when: ansible_distribution == "Ubuntu"
+  user: name=mu shell=/usr/bin/fish
