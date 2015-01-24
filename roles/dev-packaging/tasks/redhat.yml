@@ -5,3 +5,4 @@
   with_items:
 
   - rpm-build
+  - python3-devel

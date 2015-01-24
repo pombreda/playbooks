@@ -4,5 +4,5 @@
   action: yum name={{ item }}
   with_items:
 
-    - vim-X11
     - google-droid-sans-mono-fonts
+    - vim-X11
