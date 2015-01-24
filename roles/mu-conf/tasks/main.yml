@@ -5,9 +5,9 @@
   include: ubuntu.yml
 
 - name: apt
-  when: ansible_pkg_mgr == 'apt':
+  when: ansible_pkg_mgr == 'apt'
   include: apt.yml
 
 - name: yum
-  when: ansible_pkg_mgr == 'yum':
+  when: ansible_pkg_mgr == 'yum'
   include: yum.yml

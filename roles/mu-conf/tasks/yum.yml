@@ -1,7 +1,7 @@
 # Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
 
 - name: yum
-action: yum name={{ item }}
-with_items:
+  action: yum name={{ item }}
+  with_items:
 
     - vim-X11
