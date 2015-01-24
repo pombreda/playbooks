@@ -1,0 +1,4 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Remove Amazon Shopping Lens
+  apt: name=unity-webapps-common state=absent purge=yes

@@ -1,0 +1,14 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install packages
+  action: apt pkg={{ item }} state=installed
+  with_items:
+
+  - apt-file
+  - gufw
+  - hardinfo
+  - htop
+  - qrencode
+  - tree
+  - vim
+  - vnstat

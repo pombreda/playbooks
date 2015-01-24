@@ -1,0 +1,17 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Add PPA martin-ueding/stable
+  apt_repository:
+    repo: 'ppa:martin-ueding/stable'
+    state: present
+
+- name: Install Ubuntu specific packages
+  action: apt pkg={{ item }} state=installed
+  with_items:
+
+  - bogomips
+  - fish
+  - legacy-file-formats
+  - maintenance
+  - python3-termcolor
+  - unwrap-pdf-to-jpeg

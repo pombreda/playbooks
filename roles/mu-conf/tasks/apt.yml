@@ -1,0 +1,20 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install packages
+  action: apt pkg={{ item }} state=installed
+  with_items:
+
+  - awesome
+  - awesome-extra
+  - enigmail
+  - firefox
+  - gstreamer0.10-plugins-bad
+  - imagemagick
+  - k4dirstat
+  - konversation
+  - lock-and-off
+  - pavucontrol
+  - pinentry-qt4
+  - thunderbird-locale-de
+  - vlc
+  - xournal
