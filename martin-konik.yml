@@ -1,0 +1,8 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: martin-konik
+  hosts:
+  - martin-konik.local
+  sudo: yes
+  roles:
+  - dev-packaging

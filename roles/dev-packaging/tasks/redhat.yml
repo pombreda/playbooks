@@ -1,0 +1,7 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: RedHat
+  action: yum name={{ item }} state=installed
+  with_items:
+
+  - rpm-build

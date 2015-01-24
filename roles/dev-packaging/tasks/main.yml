@@ -1,5 +1,24 @@
 # Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
 
+# For Ubuntu 14.10:
+# "ansible_distribution": "Ubuntu"
+# "ansible_os_family": "Debian"
+# "ansible_pkg_mgr": "apt"
+#
+# For Debian 7:
+# "ansible_distribution": "Debian"
+# "ansible_os_family": "Debian"
+# "ansible_pkg_mgr": "apt"
+#
+# For Fedora 21:
+# "ansible_distribution": "Fedora",
+# "ansible_os_family": "RedHat"
+# "ansible_pkg_mgr": "yum"
+
 - name: Install packaging packages for Debian based distributions
   when: ansible_os_family == 'Debian'
   include: debian.yml
+
+- name: Install packaging packages for RedHat based distributions
+  when: ansible_os_family == 'RedHat'
+  include: redhat.yml
