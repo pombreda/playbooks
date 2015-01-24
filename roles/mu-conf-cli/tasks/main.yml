@@ -4,10 +4,14 @@
   when: ansible_pkg_mgr == 'apt'
   include: apt.yml
 
+- name: yum
+  when: ansible_pkg_mgr == 'yum'
+  include: yum.yml
+
 - name: Ubuntu
   when: ansible_distribution == "Ubuntu"
   include: ubuntu.yml
 
 - name: Set shell to fish
-  when: ansible_distribution == "Ubuntu"
+  when: ansible_distribution != "Debian"
   user: name=mu shell=/usr/bin/fish
