@@ -1,0 +1,6 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: martin-knapstrup
+  hosts: martin-knapstrup.local
+  roles:
+  - mu-conf-cli
