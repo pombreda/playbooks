@@ -12,6 +12,10 @@
   when: ansible_distribution == "Ubuntu"
   include: ubuntu.yml
 
+- name: Fedora
+  when: ansible_distribution == 'Fedora'
+  include: fedora.yml
+
 - name: Set shell to fish
   when: ansible_distribution != "Debian"
   user: name=mu shell=/usr/bin/fish

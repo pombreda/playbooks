@@ -4,6 +4,7 @@
   action: yum name={{ item }}
   with_items:
 
-    - git
     - fish
+    - git
+    - unison
     - vim-enhanced

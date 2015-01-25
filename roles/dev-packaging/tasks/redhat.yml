@@ -4,5 +4,6 @@
   action: yum name={{ item }} state=installed
   with_items:
 
-  - rpm-build
+  - osc
   - python3-devel
+  - rpm-build

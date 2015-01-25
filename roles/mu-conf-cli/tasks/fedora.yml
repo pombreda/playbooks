@@ -1,0 +1,7 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install Open Build Service repository
+  when: ansible_distribution_version == '21'
+  get_url:
+    url: http://download.opensuse.org/repositories/home:/martinueding/Fedora_21/home:martinueding.repo
+    dest: /etc/yum.repos.d/

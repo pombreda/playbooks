@@ -5,6 +5,7 @@
   with_items:
 
   - a4-scan
+  - backup-scripts
   - clementine
   - fatrat
   - gimp
@@ -14,9 +15,9 @@
   - mp3-packer
   - pdftk
   - scantailor
-  - uni-tools
-  - backup-scripts
   - task
+  - uni-tools
+  - unison-gtk
   - viking
   - whois
   - zbar-tools
