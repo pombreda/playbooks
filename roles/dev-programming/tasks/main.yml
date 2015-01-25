@@ -19,3 +19,5 @@
   - nvidia-cuda-dev
   - nvidia-cuda-toolkit
   - openmpi-bin
+  - pep8
+  - pyflakes
