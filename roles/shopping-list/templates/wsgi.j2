@@ -1,4 +1,4 @@
-# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+# Copyright © 2014-2015 Martin Ueding <dev@martin-ueding.de>
 # {{ ansible_managed }}
  
 WSGIScriptAlias /shoppinglist /opt/shopping-list-site/shoppinglistsite/wsgi.py
@@ -9,3 +9,12 @@ WSGIPythonPath /opt/shopping-list-site/
         Allow from all
         </Files>
 </Directory>
+
+Alias /shoppinglist/static/ /usr/share/shopping-list/static/
+
+<Directory /usr/share/shopping-list/static/>
+    Order deny,allow
+    Allow from all
+</Directory>
+
+# vim: ft=apache

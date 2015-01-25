@@ -1,10 +1,11 @@
 # Copyright © 2014-2015 Martin Ueding <dev@martin-ueding.de>
 
-- name: Install Apache
-  apt: name=apache2 state=present
-
-- name: Install Django
-  apt: name=python-django state=present
+- name: Install needed packages
+  apt: name={{ item }} state=present
+  with_items:
+  - apache2
+  - python-django
+  - python-mysqldb
 
 - name: Install WSGI script
   template: src=wsgi.j2 dest=/etc/apache2/conf.d/shopping-list
@@ -36,5 +37,3 @@
   command: python manage.py collectstatic --noinput
   args:
     chdir: /opt/shopping-list-site
-
-# TODO Add MySQL user

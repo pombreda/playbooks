@@ -3,6 +3,8 @@
 - name: martin-gelderland
   hosts: martin-gelderland.local
   roles:
+  - role: shopping-list
+    tags: shopping-list
   - role: franklinkim.vsftpd
     vsftpd_config:
       local_enable: YES
@@ -30,7 +32,6 @@
 
   - file-server
   - mu-and-fs
-  - role: shopping-list
 
   - role: apache-with-ssl
 
