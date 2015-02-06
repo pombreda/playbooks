@@ -1,0 +1,13 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install packages
+  zypper: name={{ item }} state=present
+  with_items:
+
+  - libtelepathy-farstream3
+  - pidgin
+  - pidgin-otr
+  - psi
+  - psi+
+  - psi+-plugins-otrplugin
+  - telepathy-kde

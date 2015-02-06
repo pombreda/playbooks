@@ -1,0 +1,13 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: apt
+  include: apt.yml
+  when: ansible_pkg_mgr == 'apt'
+
+- name: zypper
+  include: zypper.yml
+  when: ansible_pkg_mgr == 'zypper'
+
+- name: yum
+  include: yum.yml
+  when: ansible_pkg_mgr == 'yum'
