@@ -6,7 +6,6 @@
 
   - apt-file
   - gufw
-  - hardinfo
   - htop
   - qrencode
   - tree

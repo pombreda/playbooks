@@ -1,1 +1,11 @@
 # Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install packages
+  apt: name={{ item }} state=present
+  with_items:
+
+  - kde-telepathy
+  - libtelepathy-farstream2
+  - libtelepathy-farstream3
+  - libtelepathy-qt4-farstream2
+  - telepathy-gabble
