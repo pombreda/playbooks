@@ -38,6 +38,8 @@
     dest: /opt/shopping-list-site/shoppinglistsite/settings.py
     regexp: '^DEBUG = '
     line: 'DEBUG = False'
+  notify:
+  - Restart Apache
 
 - name: Copy static files
   command: python manage.py collectstatic --noinput
