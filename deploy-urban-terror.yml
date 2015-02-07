@@ -1,0 +1,25 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+# Downloads and distributes Urban Terror within the network.
+
+- name: Download Urban Terror to server
+  hosts:
+    - localhost
+  tasks:
+    - name: Download Urban Terror ZIP archive
+      get_url:
+        url: http://www.urbanterror.info/external-link/?r=yygpKbDS1y8t0EtKLEpKLMkv1ksr0i8tKtEPBXLzQlKLivKLTIzi00pzcgyMjPWqMgsUMiB6ysvL9UpBikrAivQy89Ly9VPyy_Ny8hNTivUB
+        dest: /var/tmp/UrbanTerror42_full023.zip
+
+- name: Install Urban Terror on clients
+  hosts:
+    - localhost
+    - martin-tinker.local
+    - martin-welsh.local
+  sudo: yes
+  tasks:
+  - name: 
+    unarchive:
+      src: /var/tmp/UrbanTerror42_full023.zip
+      dest: /opt/
+      creates: /opt/UrbanTerror42/
