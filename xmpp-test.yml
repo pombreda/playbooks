@@ -4,5 +4,6 @@
   hosts:
   - martin-gotland.fritz.box
   - martin-konik.local
+  - martin-connemara.local
   roles:
   - xmpp-client
