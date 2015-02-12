@@ -1,0 +1,10 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install yum-cron
+  yum: name=yum-cron state=present
+
+- name: Enable automatic updates
+  lineinfile:
+    dest: /etc/yum/yum-cron.conf
+    regexp: '^apply_updates'
+    line: 'apply_updates = yes'

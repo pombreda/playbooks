@@ -1,0 +1,5 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Fedora
+  include: fedora.yml
+  when: ansible_distribution == 'Fedora'
