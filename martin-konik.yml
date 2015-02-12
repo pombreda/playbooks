@@ -4,5 +4,6 @@
   hosts:
   - martin-konik.local
   roles:
+  - automatic-upgrades
   - dev-packaging
   - mu-conf
