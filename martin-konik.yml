@@ -3,7 +3,6 @@
 - name: martin-konik
   hosts:
   - martin-konik.local
-  sudo: yes
   roles:
   - dev-packaging
   - mu-conf
