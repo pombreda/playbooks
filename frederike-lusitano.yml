@@ -14,6 +14,8 @@
   - automatic-upgrades
   - mu-and-fs
   - mu-conf
+  - role: ubuntu-release-upgrades
+    lts: false
 
   tasks:
   - name: Add user account for watching

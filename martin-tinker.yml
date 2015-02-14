@@ -1,16 +1,17 @@
-# Copyright © 2014-2015 Martin Ueding <dev@martin-ueding.de>
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
 
-- name: martin-welsh
+- name: martin-tinker
   hosts:
-  - martin-welsh.local
+  - martin-tinker.local
   sudo: yes
   roles:
+  - role: apt-cacher-client
+    state: absent
   - automatic-upgrades
   - mu-and-fs
   - mu-conf
-  - dev-programming
   - role: flash
     state: absent
-  - xmpp-client
   - role: ubuntu-release-upgrades
     lts: false
+

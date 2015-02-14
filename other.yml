@@ -1,18 +1,5 @@
 # Copyright © 2014-2015 Martin Ueding <dev@martin-ueding.de>
 
-- name: Other towers
-  hosts:
-  - martin-tinker.local
-  sudo: yes
-  roles:
-  - role: apt-cacher-client
-    state: absent
-  - automatic-upgrades
-  - mu-and-fs
-  - mu-conf
-  - role: flash
-    state: absent
-
 - name: Debian VMs
   hosts:
   - martin-stable.local

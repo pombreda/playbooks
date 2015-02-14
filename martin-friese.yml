@@ -16,3 +16,5 @@
   - martin-hydrogen-backup
   - role: flash
     state: absent
+  - role: ubuntu-release-upgrades
+    lts: false

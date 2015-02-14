@@ -1,0 +1,7 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Update policy
+  lineinfile:
+    dest: /etc/update-manager/release-upgrades
+    regexp: ^Prompt=
+    line: Prompt={{ 'lts' if lts else 'normal' }}

@@ -1,4 +1,4 @@
-# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+# Copyright © 2014-2015 Martin Ueding <dev@martin-ueding.de>
 
 - name: martin-flash
   hosts:
@@ -11,3 +11,5 @@
   - mu-and-fs
   - role: flash
     state: present
+  - role: ubuntu-release-upgrades
+    lts: false
