@@ -14,4 +14,5 @@
     state: absent
   - role: ubuntu-release-upgrades
     lts: false
-
+  - role: log-in-as-root
+    tags: auth

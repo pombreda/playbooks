@@ -5,6 +5,8 @@
   - martin-flash.local
   sudo: yes
   roles:
+  - role: log-in-as-root
+    tags: auth
   - mu-conf
   - automatic-upgrades
   - dev-common

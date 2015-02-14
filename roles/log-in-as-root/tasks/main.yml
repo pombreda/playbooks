@@ -1,0 +1,7 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Add SSH key
+  authorized_key:
+    user: root
+    key: "{{ lookup('file', '/home/mu/.ssh/new-id_rsa.pub') }}"
+    state: present
