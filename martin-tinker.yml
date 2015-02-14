@@ -4,6 +4,7 @@
   hosts:
   - martin-tinker.local
   roles:
+  - hiddentao.swapmem
   - steam
   - automatic-upgrades
   - mu-and-fs
