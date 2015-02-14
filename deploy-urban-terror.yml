@@ -17,10 +17,19 @@
     - martin-tinker.local
     - martin-welsh.local
   tasks:
+
+  - name: Copy archive
+    copy:
+      src: /var/tmp/UrbanTerror42_full023.zip
+      dest: /var/tmp/UrbanTerror42_full023.zip
+      force: no
+
   - name: Extract Urban Terror
     unarchive:
       src: /var/tmp/UrbanTerror42_full023.zip
       dest: /opt/
       creates: /opt/UrbanTerror42/
+      copy: no
+
   - name: Install Nexuiz
     apt: name=nexuiz state=installed
