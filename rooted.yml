@@ -1,0 +1,18 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+# All devices where I can log in as root can be handeled together.
+
+- hosts:
+    - martin-tinker.local
+    - martin-gelderland.local
+    - martin-unstable.local
+    - martin-stable.local
+    - martin-knapstrup.local
+
+  roles:
+      - automatic-upgrades
+      - mu-and-fs
+      - mu-conf
+      - role: ubuntu-release-upgrades
+        lts: false
+      - log-in-as-root
