@@ -16,10 +16,11 @@
     - localhost
     - martin-tinker.local
     - martin-welsh.local
-  sudo: yes
   tasks:
-  - name: 
+  - name: Extract Urban Terror
     unarchive:
       src: /var/tmp/UrbanTerror42_full023.zip
       dest: /opt/
       creates: /opt/UrbanTerror42/
+  - name: Install Nexuiz
+    apt: name=nexuiz state=installed
