@@ -3,13 +3,6 @@
 - name: martin-flash
   hosts:
   - martin-flash.local
-  sudo: yes
   roles:
-  - mu-conf
-  - automatic-upgrades
-  - dev-common
-  - mu-and-fs
   - role: flash
     state: present
-  - role: ubuntu-release-upgrades
-    lts: false

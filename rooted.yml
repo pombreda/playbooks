@@ -3,14 +3,9 @@
 # All devices where I can log in as root can be handeled together.
 
 - hosts:
-    - martin-connemara.local
-    - martin-gelderland.local
-    - martin-gotland.local
-    - martin-knapstrup.local
-    - martin-konik.local
-    - martin-stable.local
     - martin-tinker.local
-    - martin-unstable.local
+    - martin-gelderland.local
+    - vms
 
   roles:
       - role: apt-cacher-server
