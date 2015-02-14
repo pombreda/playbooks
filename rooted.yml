@@ -3,9 +3,8 @@
 # All devices where I can log in as root can be handeled together.
 
 - hosts:
-    - martin-tinker.local
-    - martin-gelderland.local
-    - vms
+    - root-login
+    - root-login-new
 
   roles:
       - role: apt-cacher-server

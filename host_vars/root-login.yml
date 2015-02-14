@@ -1,0 +1,4 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+ansible_ssh_user: root
+sudo: no
