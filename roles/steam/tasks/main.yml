@@ -1,0 +1,20 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Download Steam
+  get_url:
+    url: http://media.steampowered.com/client/installer/steam.deb
+    dest: /var/tmp/steam.deb
+
+- name: Install Steam
+  apt:
+    deb: /var/tmp/steam.deb
+    state: installed
+
+- name: Install dependencies
+  apt: name={{ item }} state=installed
+  with_items:
+
+  - xterm
+  - libgl1-mesa-dri:i386
+  - libgl1-mesa-glx:i386
+  - libc6:i386
