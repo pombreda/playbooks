@@ -10,6 +10,8 @@
     - martin-knapstrup.local
 
   roles:
+      - role: apt-cacher-server
+        state: absent
       - automatic-upgrades
       - mu-and-fs
       - mu-conf

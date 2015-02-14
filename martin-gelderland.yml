@@ -13,9 +13,6 @@
 
   - role: radicale
 
-  - role: apt-cacher-server
-    state: absent
-
   - suspend-hdd
 
   - role: smokeping
@@ -31,7 +28,6 @@
       - [Router, fritz.box]
 
   - file-server
-  - mu-and-fs
 
   - role: apache-with-ssl
 

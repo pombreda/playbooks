@@ -3,7 +3,6 @@
 - name: martin-tinker
   hosts:
   - martin-tinker.local
-  sudo: yes
   roles:
   - role: apt-cacher-client
     state: absent
