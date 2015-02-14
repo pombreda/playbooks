@@ -7,17 +7,18 @@
   - a4-scan
   - backup-scripts
   - clementine
+  - enigmail
   - fatrat
   - gimp
   - inkscape
   - keepassx
+  - maintenance
   - mediathekview
   - mp3-packer
   - pdftk
   - scantailor
-  - enigmail
-  - thunderbird-locale-de
   - task
+  - thunderbird-locale-de
   - uni-tools
   - unison-gtk
   - viking

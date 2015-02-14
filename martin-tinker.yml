@@ -4,8 +4,7 @@
   hosts:
   - martin-tinker.local
   roles:
-  - role: apt-cacher-client
-    state: absent
+  - steam
   - automatic-upgrades
   - mu-and-fs
   - mu-conf
