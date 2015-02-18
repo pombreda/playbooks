@@ -3,8 +3,9 @@
 - name: frederike-lusitano
   hosts:
   - frederike-lusitano.local
-  sudo: yes
   roles:
+  - role: log-in-as-root
+    tags: auth
   - home-entertainment
   - role: flash
     state: present
