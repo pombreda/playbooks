@@ -1,0 +1,13 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Add cron entry
+  cron:
+    name: battery-health
+    job: battery-health
+    user: mu
+    state: present
+    minute: '*/5'
+    hour: '*'
+    day: '*'
+    month: '*'
+    weekday: '*'
