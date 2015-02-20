@@ -1,0 +1,12 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install packages
+  apt: name={{ item }} state=installed
+  with_items:
+  - tp-smapi-dkms
+  - sysfsutils
+
+- name: Enable kernel module
+  modprobe: name=tp_smapi state=present
+
+# TODO Install options for sysfsutils
