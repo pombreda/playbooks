@@ -16,11 +16,13 @@
   - gitk
   - kcolorchooser
   - ohcount
+  - pandoc
   - project-tools
   - python3-dateutil
   - python3-docutils
   - python3-matplotlib
   - python3-numpy
+  - python3-pandas
   - python3-prettytable
   - python3-scipy
   - python3-sphinx
