@@ -1,17 +1,24 @@
 # Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
 
 - name: Add new user
-user:
+  user:
     name: tutoring
     password: '{{ password }}'
     update_password: on_create
+
+- name: Test for BlueJ
+  shell: apt-cache show bluej | grep installed
+  register: bluej_check
+  ignore_errors: True
 
 - name: Download Debian package
   get_url:
     url: http://www.bluej.org/download/files/bluej-314b.deb
     dest: /tmp/bluej.deb
+  when: bluej_check|failed
 
 - name: Install Debian package
   apt:
     deb: /tmp/bluej.deb
-    state: present
+    state: installed
+  when: bluej_check|failed
