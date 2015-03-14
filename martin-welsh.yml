@@ -3,7 +3,6 @@
 - name: martin-welsh
   hosts:
   - martin-welsh.local
-  sudo: yes
   roles:
   - role: log-in-as-root
     tags: auth
