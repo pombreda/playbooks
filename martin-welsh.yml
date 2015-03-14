@@ -7,6 +7,8 @@
   roles:
   - automatic-upgrades
   - mu-and-fs
+  - role: cs-tutoring
+    password: '{{ tutoring_password_hash }}'
   - mu-conf
   - dev-programming
   - role: flash
