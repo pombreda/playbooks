@@ -5,7 +5,7 @@
     name: battery-health
     job: battery-health
     user: mu
-    state: present
+    state: '{{ state }}'
     minute: '*/5'
     hour: '*'
     day: '*'

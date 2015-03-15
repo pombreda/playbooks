@@ -18,4 +18,3 @@
     state: absent
   - role: ubuntu-release-upgrades
     lts: false
-  - battery-health
