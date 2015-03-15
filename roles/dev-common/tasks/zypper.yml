@@ -1,0 +1,25 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install common packages
+  action: zypper name={{ item }} state=installed
+  with_items:
+
+    #- boxes
+    #- exuberant-ctags
+    #- fonts-droid
+    #- python3-prettytable
+  - astyle
+  - git
+  - git-gui
+  - gitk
+  - gvim
+  - kcolorchooser
+  - ohcount
+  - pandoc
+  - python3-dateutil
+  - python3-docutils
+  - python3-matplotlib
+  - python3-numpy
+  - python3-pandas
+  - python3-scipy
+  - python3-Sphinx

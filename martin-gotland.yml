@@ -1,0 +1,8 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- hosts: martin-gotland.fritz.box
+  roles:
+  - automatic-upgrades
+  - dev-common
+  - dev-packaging
+  - mu-conf-cli

@@ -14,6 +14,11 @@
 # "ansible_distribution": "Fedora",
 # "ansible_os_family": "RedHat"
 # "ansible_pkg_mgr": "yum"
+#
+# For openSUSE 13.2:
+# "ansible_os_family": "Suse", 
+# "ansible_pkg_mgr": "zypper",
+# "ansible_distribution": "Suse"
 
 - name: Install packaging packages for Debian based distributions
   when: ansible_os_family == 'Debian'
@@ -22,3 +27,7 @@
 - name: Install packaging packages for RedHat based distributions
   when: ansible_os_family == 'RedHat'
   include: redhat.yml
+
+- name: Install packaging packages for openSUSE based distributions
+  when: ansible_os_family == 'Suse'
+  include: opensuse.yml

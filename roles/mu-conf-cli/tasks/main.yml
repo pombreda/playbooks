@@ -8,6 +8,10 @@
   when: ansible_pkg_mgr == 'yum'
   include: yum.yml
 
+- name: zypper
+  when: ansible_pkg_mgr == 'zypper'
+  include: zypper.yml
+
 - name: Ubuntu
   when: ansible_distribution == "Ubuntu"
   include: ubuntu.yml

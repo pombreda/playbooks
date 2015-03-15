@@ -1,0 +1,9 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: openSUSE
+  action: zypper name={{ item }} state=installed
+  with_items:
+
+  - osc
+  - python3-devel
+  - rpm-build

@@ -1,31 +1,13 @@
 # Copyright © 2014-2015 Martin Ueding <dev@martin-ueding.de>
 
-- name: Install common packages
-  action: apt name={{ item }} state=installed
-  with_items:
+- name: Ubuntu
+  when: ansible_distribution == 'Ubuntu'
+  include: ubuntu.yml
 
-  - astyle
-  - boxes
-  - copyright-updater
-  - exuberant-ctags
-  - fastplot
-  - fonts-droid
-  - git
-  - git-gui
-  - git-ignore-untracked
-  - gitk
-  - kcolorchooser
-  - ohcount
-  - pandoc
-  - project-tools
-  - python3-dateutil
-  - python3-docutils
-  - python3-matplotlib
-  - python3-numpy
-  - python3-pandas
-  - python3-prettytable
-  - python3-scipy
-  - python3-sphinx
-  - python3-unitprint
-  - template-spawner
-  - vim-gtk
+- name: apt
+  when: ansible_pkg_mgr == 'apt'
+  include: apt.yml
+
+- name: zypper
+  when: ansible_pkg_mgr == 'zypper'
+  include: zypper.yml

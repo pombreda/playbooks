@@ -1,0 +1,12 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install common packages
+  action: apt name={{ item }} state=installed
+  with_items:
+
+  - fastplot
+  - template-spawner
+  - python3-unitprint
+  - project-tools
+  - copyright-updater
+  - git-ignore-untracked

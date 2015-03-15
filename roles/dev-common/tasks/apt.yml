@@ -1,0 +1,25 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install common packages
+  action: apt name={{ item }} state=installed
+  with_items:
+
+  - astyle
+  - boxes
+  - exuberant-ctags
+  - fonts-droid
+  - git
+  - git-gui
+  - gitk
+  - kcolorchooser
+  - ohcount
+  - pandoc
+  - python3-dateutil
+  - python3-docutils
+  - python3-matplotlib
+  - python3-numpy
+  - python3-pandas
+  - python3-prettytable
+  - python3-scipy
+  - python3-sphinx
+  - vim-gtk

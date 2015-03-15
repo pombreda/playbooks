@@ -3,3 +3,7 @@
 - name: Fedora
   include: fedora.yml
   when: ansible_distribution == 'Fedora'
+
+- name: openSUSE
+  include: opensuse.yml
+  when: ansible_distribution == 'Suse'
