@@ -1,7 +1,13 @@
 # Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
 
-- name: Add SSH key
+- name: Add password protected SSH key
   authorized_key:
     user: root
     key: "{{ lookup('file', '/home/mu/.ssh/new-id_rsa.pub') }}"
     state: present
+
+- name: Remove unprotected SSH key
+  authorized_key:
+    user: root
+    key: "{{ lookup('file', '/home/mu/.ssh/id_rsa.pub') }}"
+    state: absent
