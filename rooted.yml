@@ -4,14 +4,12 @@
 
 - hosts:
   - root-login
-  - root-login-new
 
   roles:
   - role: apt-cacher-server
     state: absent
   - automatic-upgrades
   - mu-and-fs
-  - mu-conf
   - role: ubuntu-release-upgrades
     lts: false
   - log-in-as-root
