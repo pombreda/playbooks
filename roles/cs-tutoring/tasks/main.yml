@@ -5,6 +5,7 @@
     name: tutoring
     password: '{{ password }}'
     update_password: on_create
+    shell: /bin/bash
 
 - name: Test for BlueJ
   shell: apt-cache show bluej | grep installed
