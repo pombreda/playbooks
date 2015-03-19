@@ -1,9 +1,10 @@
-# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+# Copyright © 2014-2015 Martin Ueding <dev@martin-ueding.de>
 
 - name: Install LaTeX packages
   action: apt name={{ item }} state=installed
   with_items:
 
+  - biber
   - kbibtex
   - latex-edit
   - latexmk
