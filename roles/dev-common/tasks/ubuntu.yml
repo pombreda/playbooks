@@ -4,9 +4,9 @@
   action: apt name={{ item }} state=installed
   with_items:
 
-  - fastplot
-  - template-spawner
-  - python3-unitprint
-  - project-tools
   - copyright-updater
+  - fastplot
   - git-ignore-untracked
+  - project-tools
+  - python3-unitprint
+  - template-spawner
