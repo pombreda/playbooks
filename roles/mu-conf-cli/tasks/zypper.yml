@@ -6,7 +6,6 @@
     repo: http://download.opensuse.org/repositories/home:/martinueding/openSUSE_13.2/home:martinueding.repo
     state: present
 
-
 - name: zypper
   action: zypper name={{ item }} state=installed
   with_items:
