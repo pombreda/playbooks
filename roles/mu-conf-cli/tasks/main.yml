@@ -20,6 +20,14 @@
   when: ansible_distribution == 'Fedora'
   include: fedora.yml
 
-- name: Set shell to fish
-  when: ansible_distribution != "Debian"
+- name: Check for fish shell
+  stat: path=/usr/bin/fish
+  register: usr_bin_fish
+
+- name: Set shell to fish if it exists
+  when: ansible_distribution != "Debian" and usr_bin_fish.stat.exists
   user: name=mu shell=/usr/bin/fish
+
+- name: Set shell to bash
+  when: not usr_bin_fish.stat.exists
+  user: name=mu shell=/bin/bash
