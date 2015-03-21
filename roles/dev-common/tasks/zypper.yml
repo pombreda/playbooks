@@ -16,6 +16,7 @@
   - kcolorchooser
   - ohcount
   - pandoc
+  - project-tools
   - python3-dateutil
   - python3-docutils
   - python3-matplotlib
