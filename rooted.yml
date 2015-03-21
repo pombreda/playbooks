@@ -6,8 +6,6 @@
   - root-login
 
   roles:
-  - role: apt-cacher-server
-    state: absent
   - automatic-upgrades
   - mu-and-fs
   - role: ubuntu-release-upgrades
