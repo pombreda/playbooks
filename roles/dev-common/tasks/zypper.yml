@@ -22,5 +22,6 @@
   - python3-numpy
   - python3-pandas
   - python3-PrettyTable
+  - python3-requests
   - python3-scipy
   - python3-Sphinx

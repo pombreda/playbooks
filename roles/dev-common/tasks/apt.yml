@@ -20,6 +20,7 @@
   - python3-numpy
   - python3-pandas
   - python3-prettytable
+  - python3-requests
   - python3-scipy
   - python3-sphinx
   - vim-gtk
