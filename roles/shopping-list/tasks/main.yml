@@ -21,7 +21,7 @@
     dest: /etc/shopping-list/databases.js
     owner: www-data
     group: www-data
-    mode: 0644
+    mode: 0600
   notify:
   - Restart Apache
 
