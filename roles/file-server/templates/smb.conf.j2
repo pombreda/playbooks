@@ -334,37 +334,6 @@ create mask = 0700
 ;   postexec = /bin/umount /cdrom
 
 
-[games-data]
-comment = Common Game Files
-guest ok = yes
-path = /extern/alpha/games-data/
-printable = no
-public = yes
-writeable = no
-
-[games-data-writeable]
-comment = Common Game Files (Writeable)
-path = /extern/alpha/games-data/
-printable = no
-valid users = mu
-writeable = yes
-
-[fs-alpha]
-comment = Frederike @ Alpha
-path = /extern/alpha/fs/
-printable = no
-public = yes
-valid users = fs
-writeable = yes
-
-[mu-alpha]
-comment = Martin @ Alpha
-path = /extern/alpha/mu/
-printable = no
-public = yes
-valid users = mu
-writeable = yes
-
 [Share-SD-Card]
 comment = Share on SD Card
 path = /var/samba-share/
