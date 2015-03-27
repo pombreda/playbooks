@@ -1,4 +1,4 @@
-# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+# Copyright © 2014-2015 Martin Ueding <dev@martin-ueding.de>
 
 - hosts: all
   sudo: yes
@@ -10,5 +10,5 @@
     unattended_autofix_interrupted_dpkg: true
     unattended_minimal_steps: true
     unattended_install_on_shutdown: false
-    unattended_remove_unused_dependencies: false
+    unattended_remove_unused_dependencies: true
     unattended_automatic_reboot: false
