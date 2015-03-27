@@ -6,8 +6,6 @@
   roles:
   - ansible-master
   - fix-gnome-keyring
-  - role: apt-cacher-client
-    state: absent
   - automatic-upgrades
   - dev-latex
   - dev-programming
