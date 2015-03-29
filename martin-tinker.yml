@@ -3,8 +3,8 @@
 - name: martin-tinker
   hosts:
   - martin-tinker.local
-  sudo: yes
   roles:
+  - role: log-in-as-root
   - automatic-upgrades
   - mu-and-fs
   - mu-conf
@@ -12,6 +12,5 @@
     state: present
   - role: ubuntu-release-upgrades
     lts: true
-  - role: log-in-as-root
   - role: home-entertainment
     mysql_root_password: '{{ martin_tinker_mysql_root_password }}'
