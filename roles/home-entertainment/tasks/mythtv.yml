@@ -24,3 +24,6 @@
 
 - name: Install gstreamer libav
   apt: name=gstreamer1.0-libav state=present
+
+- name: Fix MySQL time zone data
+  shell: mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root -p{{ mysql_root_password }} mysql
