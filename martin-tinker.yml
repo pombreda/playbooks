@@ -3,6 +3,7 @@
 - name: martin-tinker
   hosts:
   - martin-tinker.local
+  sudo: yes
   roles:
   - automatic-upgrades
   - mu-and-fs

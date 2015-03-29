@@ -7,7 +7,6 @@
   - apt-file
   - gufw
   - htop
-  - qrencode
   - tree
   - unison
   - vim

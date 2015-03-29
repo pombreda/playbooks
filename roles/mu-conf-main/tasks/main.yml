@@ -5,24 +5,36 @@
   with_items:
 
   - a4-scan
+  - awesome
+  - awesome-extra
   - backup-scripts
   - clementine
   - enigmail
   - fatrat
   - gimp
+  - imagemagick
   - inkscape
+  - k4dirstat
   - keepassx
+  - konversation
+  - legacy-file-formats
+  - lock-and-off
   - maintenance
   - mediathekview
   - mp3-packer
   - pdftk
+  - pinentry-qt4
+  - python3-termcolor
+  - qrencode
   - scantailor
   - task
   - thunderbird-locale-de
   - uni-tools
   - unison-gtk
+  - unwrap-pdf-to-jpeg
   - viking
   - whois
+  - xournal
   - zbar-tools
 
 - name: Install thinkpad-scripts

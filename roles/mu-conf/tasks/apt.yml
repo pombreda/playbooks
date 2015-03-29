@@ -4,16 +4,7 @@
   action: apt pkg={{ item }} state=installed
   with_items:
 
-  - awesome
-  - awesome-extra
   - firefox
   - gstreamer0.10-plugins-bad
   - hardinfo
-  - imagemagick
-  - k4dirstat
-  - konversation
-  - lock-and-off
   - pavucontrol
-  - pinentry-qt4
-  - vlc
-  - xournal
