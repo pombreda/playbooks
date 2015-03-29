@@ -7,10 +7,10 @@
   - role: log-in-as-root
   - automatic-upgrades
   - mu-and-fs
-  - mu-conf
   - role: flash
     state: present
   - role: ubuntu-release-upgrades
     lts: true
   - role: home-entertainment
     mysql_root_password: '{{ martin_tinker_mysql_root_password }}'
+  - mu-conf
