@@ -8,4 +8,5 @@
   args:
     creates: /usr/share/doc/libdvdcss2
 
+- include: mythtv.yml
 - include: watching.yml

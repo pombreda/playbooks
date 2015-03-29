@@ -1,7 +1,12 @@
 # Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
 
 - name: Add user account for watching
-  user: name=watching state=present generate_ssh_key=yes
+  user:
+    name: watching
+    state: present
+    generate_ssh_key: yes
+    groups: mythtv
+    append: yes
 
 - name: Allow mu@martin-friese to log in
   authorized_key:

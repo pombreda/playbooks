@@ -1,0 +1,26 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install MythTV
+  apt: name=mythtv state=present
+
+- name: Install MythTV Mythbuntu Theme
+  apt: name=mythtv-theme-mythbuntu state=present
+
+- name: Create MythTV MySQL database
+  mysql_db:
+    name: mythconverg
+    state: present
+    login_user: root
+    login_password: "{{ mysql_root_password }}"
+
+- name: Create MythTV MySQL user
+  mysql_user:
+    name: mythtv
+    password: mythtv
+    state: present
+    priv: mythconverg.*:ALL,GRANT
+    login_user: root
+    login_password: "{{ mysql_root_password }}"
+
+- name: Install gstreamer libav
+  apt: name=gstreamer1.0-libav state=present

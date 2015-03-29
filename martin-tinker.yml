@@ -12,3 +12,5 @@
   - role: ubuntu-release-upgrades
     lts: true
   - role: log-in-as-root
+  - role: home-entertainment
+    mysql_root_password: '{{ martin_tinker_mysql_root_password }}'
