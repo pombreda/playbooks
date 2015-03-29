@@ -4,14 +4,11 @@
   hosts:
   - martin-tinker.local
   roles:
-  - hiddentao.swapmem
-  - steam
   - automatic-upgrades
   - mu-and-fs
   - mu-conf
   - role: flash
-    state: absent
+    state: present
   - role: ubuntu-release-upgrades
-    lts: false
+    lts: true
   - role: log-in-as-root
-    tags: auth

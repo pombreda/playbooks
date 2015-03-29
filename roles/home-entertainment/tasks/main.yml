@@ -1,4 +1,4 @@
-# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+# Copyright © 2014-2015 Martin Ueding <dev@martin-ueding.de>
 
 - name: Install VLC
   apt: name=vlc state=present
@@ -7,3 +7,5 @@
   command: /usr/share/doc/libdvdread4/install-css.sh
   args:
     creates: /usr/share/doc/libdvdcss2
+
+- include: watching.yml

@@ -1,0 +1,24 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Add user account for watching
+  user: name=watching state=present generate_ssh_key=yes
+
+- name: Allow mu@martin-friese to log in
+  authorized_key:
+    user: watching
+    key: "{{ lookup('file', '/home/mu/.ssh/id_rsa.pub') }}"
+    state: present
+
+- name: Set `watching` to be logged in automatically
+  ini_file:
+    dest: /etc/lightdm/lightdm.conf
+    section: SeatDefaults
+    option: autologin-user
+    value: watching
+
+#- name: Set `watching` to use Lubuntu
+#  ini_file:
+#    dest: /etc/lightdm/lightdm.conf
+#    section: SeatDefaults
+#    option: user-session
+#    value: Lubuntu
