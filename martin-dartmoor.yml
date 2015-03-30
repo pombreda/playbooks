@@ -1,0 +1,10 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- hosts: martin-dartmoor.fritz.box
+  roles:
+  - log-in-as-root
+  - automatic-upgrades
+  - dev-common
+  - dev-programming
+  - dev-packaging
+  - mu-conf-cli
