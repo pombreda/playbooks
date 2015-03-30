@@ -10,4 +10,4 @@
   action: zypper name={{ item }} state=installed
   with_items:
 
-    - mlocate
+  - findutils-locate

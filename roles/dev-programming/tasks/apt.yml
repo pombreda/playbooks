@@ -1,0 +1,23 @@
+# Copyright © 2014-2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install programming packages
+  action: apt name={{ item }} state=installed
+  with_items:
+
+  - clang
+  - clang-format-3.5
+  - cmake
+  - doxygen
+  - g++
+  - libboost-filesystem-dev
+  - libboost-program-options-dev
+  - libboost-system-dev
+  - libcppunit-dev
+  - libeigen3-dev
+  - libopenmpi-dev
+  - ninja-build
+  - nvidia-cuda-dev
+  - nvidia-cuda-toolkit
+  - openmpi-bin
+  - pep8
+  - pyflakes

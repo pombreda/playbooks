@@ -1,0 +1,20 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install common packages
+  action: zypper name={{ item }} state=installed
+  with_items:
+
+  - clang
+  - cmake
+  - doxygen
+  - gcc-c++
+  - ninja
+  - python-pep8
+  - python-pyflakes
+
+- name: Install common packages
+  when: ansible_distribution_version >= '13.2'
+  action: zypper name={{ item }} state=installed
+  with_items:
+
+  - clang-format-3.5
