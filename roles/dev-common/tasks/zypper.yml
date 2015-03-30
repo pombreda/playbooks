@@ -4,25 +4,36 @@
   action: zypper name={{ item }} state=installed
   with_items:
 
-  - astyle
-  - copyright-updater
   - ctags
   - git
   - git-gui
-  - git-ignore-untracked
   - gitk
   - google-droid-fonts
   - gvim
   - kcolorchooser
   - ohcount
-  - pandoc
-  - project-tools
   - python3-dateutil
   - python3-docutils
   - python3-matplotlib
   - python3-numpy
-  - python3-pandas
-  - python3-PrettyTable
   - python3-requests
   - python3-scipy
   - python3-Sphinx
+
+- name: Install common packages from OBS Home Project
+  when: ansible_distribution_version >= '13.2'
+  action: zypper name={{ item }} state=installed
+  with_items:
+
+  - copyright-updater
+  - git-ignore-untracked
+  - project-tools
+
+- name: Install common packages for 13.2 or greater
+  when: ansible_distribution_version >= '13.2'
+  action: zypper name={{ item }} state=installed
+  with_items:
+
+  - pandoc
+  - python3-pandas
+  - python3-PrettyTable
