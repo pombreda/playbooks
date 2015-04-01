@@ -11,3 +11,4 @@
     day: '*'
     month: '*'
     weekday: '*'
+    state: '{{ state }}'
