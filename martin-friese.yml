@@ -4,6 +4,9 @@
   hosts: localhost
   sudo: yes
   roles:
+  - role: charge-limits
+    start: 80
+    stop: 90
   - ansible-master
   - fix-gnome-keyring
   - automatic-upgrades

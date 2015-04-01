@@ -1,0 +1,18 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Add PPA
+  apt_repository: repo=ppa:morgwai/tpbat state=absent
+
+- name: Add PPA for trusty
+  apt_repository:
+    repo: deb http://ppa.launchpad.net/morgwai/tpbat/ubuntu trusty main
+    state: present
+
+- name: Install tpacpi-bat
+  apt: name=tpacpi-bat state=installed
+
+- name: Set start threshold
+  command: tpacpi-bat -s ST 0 {{ start }}
+
+- name: Set stop threshold
+  command: tpacpi-bat -s SP 0 {{ stop }}
