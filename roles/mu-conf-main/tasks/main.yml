@@ -17,6 +17,7 @@
   - k4dirstat
   - keepassx
   - konversation
+  - krusader
   - legacy-file-formats
   - lock-and-off
   - maintenance
@@ -27,6 +28,7 @@
   - pinentry-qt4
   - python3-termcolor
   - qrencode
+  - ranger
   - scantailor
   - task
   - thunderbird-locale-de
