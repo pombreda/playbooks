@@ -6,4 +6,5 @@
     comment: '{{ item.comment }}'
     password: '{{ item.hash }}'
     update_password: on_create
+    createhome: yes
   with_items: linux_users
