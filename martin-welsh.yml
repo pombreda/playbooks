@@ -17,3 +17,9 @@
   - xmpp-client
   - role: ubuntu-release-upgrades
     lts: false
+
+  tasks:
+  - user:
+      name: janweber
+      password: ***REMOVED***
+      shell: /bin/bash
