@@ -1,0 +1,7 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Add Kodi PPA
+  apt_repository: repo=ppa:team-xbmc/ppa state=present
+
+- name: Install kodi
+  apt: name=kodi state=installed
