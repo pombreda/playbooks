@@ -5,12 +5,12 @@
   - martin-tinker.local
   roles:
   - role: log-in-as-root
+  - role: home-entertainment
+    mysql_root_password: '{{ martin_tinker_mysql_root_password }}'
   - automatic-upgrades
   - mu-and-fs
   - role: flash
     state: present
   - role: ubuntu-release-upgrades
     lts: true
-  - role: home-entertainment
-    mysql_root_password: '{{ martin_tinker_mysql_root_password }}'
   - mu-conf
