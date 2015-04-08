@@ -6,6 +6,7 @@
     password: '{{ password }}'
     update_password: on_create
     shell: /bin/bash
+    comment: CS Tutoring,,,
 
 - name: Test for BlueJ
   shell: apt-cache show bluej | grep installed

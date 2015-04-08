@@ -24,3 +24,5 @@
       name: janweber
       password: ***REMOVED***
       shell: /bin/bash
+      update_password: on_create
+      comment: Jan Maria Weber,,,
