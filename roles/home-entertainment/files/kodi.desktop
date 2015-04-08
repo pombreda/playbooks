@@ -1,0 +1,6 @@
+[Desktop Entry]
+Exec=kodi
+Name=Kodi
+StartupNotify=false
+Terminal=false
+Type=Application

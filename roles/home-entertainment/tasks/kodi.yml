@@ -12,4 +12,15 @@
     owner: watching
     create: yes
     line: kodi
-    state: present
+    state: absent
+
+- name: Create autostart folder
+  file:
+    dest: /home/watching/.config/autostart
+    state: directory
+
+- name: Install desktop file
+  copy:
+    src: kodi.desktop
+    dest: /home/watching/.config/autostart/kodi.desktop
+    owner: watching
