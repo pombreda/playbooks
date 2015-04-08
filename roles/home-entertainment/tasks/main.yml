@@ -1,5 +1,10 @@
 # Copyright © 2014-2015 Martin Ueding <dev@martin-ueding.de>
 
+#- include: mythtv.yml
+- include: watching.yml
+- include: kodi.yml
+#- include: x10-remote.yml
+
 - name: Install VLC
   apt: name=vlc state=present
 
@@ -7,7 +12,3 @@
   command: /usr/share/doc/libdvdread4/install-css.sh
   args:
     creates: /usr/share/doc/libdvdcss2
-
-#- include: mythtv.yml
-- include: watching.yml
-- include: kodi.yml

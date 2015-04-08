@@ -1,0 +1,14 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install packages
+  action: apt pkg={{ item }} state=installed
+  with_items:
+  - lirc
+  - lirc-x
+  - xmacro
+
+- name: Remove ati_remote kernel module
+  modprobe: name=ati_remote state=absent
+
+- name: Restart lirc
+  service: name=lirc state=restarted
