@@ -18,11 +18,4 @@
   - xmpp-client
   - role: ubuntu-release-upgrades
     lts: false
-
-  tasks:
-  - user:
-      name: janweber
-      password: ***REMOVED***
-      shell: /bin/bash
-      update_password: on_create
-      comment: Jan Maria Weber,,,
+  - jan-weber
