@@ -12,6 +12,7 @@
     password: '{{ tutoring_password_hash }}'
   - mu-conf
   - dev-programming
+  - dev-latex
   - role: flash
     state: absent
   - xmpp-client
