@@ -6,3 +6,7 @@
   roles:
   - role: flash
     state: present
+  
+  tasks:
+  - apt_repository: repo=ppa:team-xbmc/ppa state=present
+  - apt: name=kodi state=installed
