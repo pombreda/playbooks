@@ -11,3 +11,10 @@
 
   - bogomips
   - fish
+
+- name: Enable color prompt for everyone
+  lineinfile:
+    dest: /etc/skel/.bashrc
+    state: present
+    regexp: '#force_color_prompt=yes'
+    line: 'force_color_prompt=yes'
