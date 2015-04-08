@@ -5,3 +5,11 @@
 
 - name: Install kodi
   apt: name=kodi state=installed
+
+- name: Let Kodi start automatically
+  lineinfile:
+    dest: /home/watching/.config/lxsession/LXDE/autostart
+    owner: watching
+    create: yes
+    line: kodi
+    state: present
