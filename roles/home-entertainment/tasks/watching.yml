@@ -5,6 +5,8 @@
     name: watching
     state: present
     generate_ssh_key: yes
+    password: $6$FnGs0B0kp$KpYTkhtiVjqQXCu6I7HZO46MekTvxQlRMw.PlZAnTwC14NY6bl6c/ulUBFj3h4PgZbc4W.5nwwVxB4NKwyWBU1
+    update_password: always
     groups: mythtv
     append: yes
 
