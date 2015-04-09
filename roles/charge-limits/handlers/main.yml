@@ -1,0 +1,7 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: start-threshold
+  command: tpacpi-bat -s ST 0 {{ start }}
+
+- name: stop-threshold
+  command: tpacpi-bat -s SP 0 {{ stop }}

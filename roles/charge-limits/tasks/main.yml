@@ -12,7 +12,17 @@
   apt: name=tpacpi-bat state=installed
 
 - name: Set start threshold
-  command: tpacpi-bat -s ST 0 {{ start }}
+  cron:
+    name: start-threshold
+    job: tpacpi-bat -s ST 0 {{ start }}
+    special_time: reboot
+    state: '{{ state }}'
+  notify: start-threshold
 
 - name: Set stop threshold
-  command: tpacpi-bat -s SP 0 {{ stop }}
+  cron:
+    name: stop-threshold
+    job: tpacpi-bat -s SP 0 {{ stop }}
+    special_time: reboot
+    state: '{{ state }}'
+  notify: stop-threshold
