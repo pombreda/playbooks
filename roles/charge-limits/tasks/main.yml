@@ -26,3 +26,12 @@
     special_time: reboot
     state: '{{ state }}'
   notify: stop-threshold
+
+- name: Install `full-charge` script
+  template:
+    src: full-charge.j2
+    dest: /usr/local/bin/full-charge
+    mode: 0755
+    owner: root
+    group: root
+  when: state == 'present'

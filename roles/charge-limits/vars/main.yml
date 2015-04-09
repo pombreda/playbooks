@@ -1,0 +1,9 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+stop: 90
+start: 80
+
+state: present
+
+full_stop: 100
+full_start: '{{ full_stop - 4 }}'
