@@ -5,5 +5,5 @@ start: 80
 
 state: present
 
-full_stop: 100
-full_start: '{{ full_stop - 4 }}'
+full_stop: 0
+full_start: 96
