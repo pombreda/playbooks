@@ -1,7 +1,15 @@
 # Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
-- user:
+
+- name: Create user account for Jan
+  user:
     name: janweber
     password: '{{ janweber_password_hash }}'
     shell: /bin/bash
     update_password: on_create
     comment: Jan Maria Weber,,,
+
+- name: Install LaTeX IDEs
+  action: apt pkg={{ item }} state=installed
+  with_items:
+  - texmaker
+  - texstudio
