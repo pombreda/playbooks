@@ -5,8 +5,8 @@
   sudo: yes
   roles:
   - role: charge-limits
-    start: 85
-    stop: 90
+    start: 80
+    stop: 85
     state: present
   - ansible-master
   - fix-gnome-keyring
