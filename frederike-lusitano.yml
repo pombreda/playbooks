@@ -4,16 +4,12 @@
   hosts:
   - frederike-lusitano.local
   roles:
-  - role: log-in-as-root
-    tags: auth
-  - home-entertainment
-  - role: flash
-    state: present
-
-  - role: apt-cacher-client
-    state: absent
   - automatic-upgrades
+  - home-entertainment
+  - log-in-as-root
   - mu-and-fs
   - mu-conf
+  - role: flash
+    state: present
   - role: ubuntu-release-upgrades
     lts: false
