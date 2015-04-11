@@ -5,6 +5,8 @@
     name: '{{ item.name }}'
     comment: '{{ item.comment }}'
     password: '{{ item.hash }}'
+    groups: '{{ item.groups }}'
+    append: yes
     update_password: on_create
     createhome: yes
   with_items: linux_users
