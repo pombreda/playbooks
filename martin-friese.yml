@@ -22,3 +22,6 @@
     lts: false
   - role: battery-health
     state: absent
+  - role: lightdm-background
+    url: https://farm6.staticflickr.com/5302/5742972261_5c80c1d374_o_d.jpg
+    suffix: jpg

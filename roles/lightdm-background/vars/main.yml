@@ -1,0 +1,4 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+image: /usr/share/wallpapers/lightdm-ansible.{{ suffix }}
+configfile: /etc/lightdm/lightdm-kde-greeter.conf

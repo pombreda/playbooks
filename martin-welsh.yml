@@ -4,6 +4,9 @@
   hosts:
   - martin-welsh.local
   roles:
+  - role: lightdm-background
+    url: https://farm6.staticflickr.com/5027/5561566142_5aeae078b1_o_d.jpg
+    suffix: jpg
   - role: log-in-as-root
     tags: auth
   - automatic-upgrades

@@ -1,0 +1,21 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Download image file
+  get_url:
+    url: '{{ url }}'
+    dest: '{{ image }}'
+
+- name: Set LightDM background image
+  ini_file:
+    dest: '{{ configfile }}'
+    section: greeter-settings
+    option: Background
+    value: '{{ image }}'
+
+- name: Set LightDM background image
+  ini_file:
+    dest: '{{ configfile }}'
+    section: greeter-settings
+    option: BackgroundKeepAspectRatio
+    value: 'true'
+
