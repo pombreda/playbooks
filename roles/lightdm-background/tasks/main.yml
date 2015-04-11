@@ -19,3 +19,9 @@
     option: BackgroundKeepAspectRatio
     value: 'true'
 
+- name: Set LightDM theme
+  ini_file:
+    dest: '{{ configfile }}'
+    section: greeter
+    option: theme-name
+    value: userbar
