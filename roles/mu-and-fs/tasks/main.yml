@@ -4,9 +4,15 @@
   user:
     name: '{{ item.name }}'
     comment: '{{ item.comment }}'
-    password: '{{ item.hash }}'
+    password: "{{ lookup('file', '~/.secrects/' + item.name + '-hash.txt') }}"
     groups: '{{ item.groups }}'
     append: yes
     update_password: on_create
     createhome: yes
-  with_items: linux_users
+  with_items: 
+    - name: mu
+      comment: Martin Ueding,,,
+      groups: adm,cdrom,sudo,plugdev
+    - name: fs
+      comment: Frederike Schrödel,,,
+      groups:

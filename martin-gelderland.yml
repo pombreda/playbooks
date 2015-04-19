@@ -3,58 +3,58 @@
 - name: martin-gelderland
   hosts: martin-gelderland.local
   roles:
-  - role: shopping-list
-    tags: shopping-list
-  - role: franklinkim.vsftpd
-    vsftpd_config:
-      local_enable: YES
-      write_enable: YES
-      ftpd_banner: Welcome to martin-gelderland FTP service.
+    - role: shopping-list
+      tags: shopping-list
+    - role: franklinkim.vsftpd
+      vsftpd_config:
+        local_enable: YES
+        write_enable: YES
+        ftpd_banner: Welcome to martin-gelderland FTP service.
 
-  - role: radicale
+    - role: radicale
 
-  - suspend-hdd
+    - suspend-hdd
 
-  - role: smokeping
-    sections:
-      Internet:
-      - [martin-ueding, martin-ueding.de]
-      - [chaos, chaos.stw-bonn.de]
-      - [spiegel, spiegel.de]
-      - [unitymedia, unitymedia.de]
-      - [telekom-dns, 217.5.100.185]
-      Local:
-      - [localhost, localhost]
-      - [Router, fritz.box]
+    - role: smokeping
+      sections:
+        Internet:
+          - [martin-ueding, martin-ueding.de]
+          - [chaos, chaos.stw-bonn.de]
+          - [spiegel, spiegel.de]
+          - [unitymedia, unitymedia.de]
+          - [telekom-dns, 217.5.100.185]
+        Local:
+          - [localhost, localhost]
+          - [Router, fritz.box]
 
-  - file-server
+    - file-server
 
-  - role: apache-with-ssl
+    - role: apache-with-ssl
 
-  - role: mysql-server
+    - role: mysql-server
 
-  - role: gelderland-backup
+    - role: gelderland-backup
 
-  - role: jnv.unattended-upgrades
-    unattended_origins_patterns:
-    - 'o=Raspbian,a=stable'
-    - 'o=Raspbian,a=stable-updates'
-    - 'o=Raspbian,a=proposed-updates'
-    - 'o=Raspbian,a=stable,label=Raspbian-Security'
-  
-    unattended_package_blacklist: []
-    unattended_autofix_interrupted_dpkg: true
-    unattended_minimal_steps: true
-    unattended_install_on_shutdown: false
-    unattended_remove_unused_dependencies: false
-    unattended_automatic_reboot: false
+    - role: jnv.unattended-upgrades
+      unattended_origins_patterns:
+        - 'o=Raspbian,a=stable'
+        - 'o=Raspbian,a=stable-updates'
+        - 'o=Raspbian,a=proposed-updates'
+        - 'o=Raspbian,a=stable,label=Raspbian-Security'
+      unattended_package_blacklist: []
+      unattended_autofix_interrupted_dpkg: true
+      unattended_minimal_steps: true
+      unattended_install_on_shutdown: false
+      unattended_remove_unused_dependencies: false
+      unattended_automatic_reboot: false
 
-  - role: flash
-    state: absent
+    - role: flash
+      state: absent
 
   tasks:
-  - name: Add user account for `zocker`
-    user:
-      name: zocker
-      password: '{{ zocker_password_hash }}'
-      state: present
+    - name: Add user account for `zocker`
+      user:
+        name: zocker
+        password: "{{ lookup('file', '~/.secrects/zocker-hash.txt') }}"
+        state: present
+      tags: users
