@@ -1,0 +1,14 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Copy face icon for {{ user }} to the machine
+  copy:
+    src: '{{ image }}'
+    dest: /var/lib/AccountsService/icons/{{ user }}.png
+    mode: 0644
+
+- name: Set the image in the Accounts Service configuration file for {{ user }}
+  ini_file:
+    dest: /var/lib/AccountsService/users/{{ user }}
+    section: User
+    option: Icon
+    value: /var/lib/AccountsService/icons/{{ user }}.png

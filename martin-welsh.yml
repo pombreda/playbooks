@@ -10,7 +10,8 @@
   - role: log-in-as-root
     tags: auth
   - automatic-upgrades
-  - mu-and-fs
+  - role: mu-and-fs
+    tags: users
   - role: cs-tutoring
     password: '{{ tutoring_password_hash }}'
   - mu-conf
