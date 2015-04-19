@@ -8,25 +8,11 @@
     generate_ssh_key: yes
     password: $6$FnGs0B0kp$KpYTkhtiVjqQXCu6I7HZO46MekTvxQlRMw.PlZAnTwC14NY6bl6c/ulUBFj3h4PgZbc4W.5nwwVxB4NKwyWBU1
     update_password: always
-    groups: mythtv
-    append: yes
+
+- include: auto-login.yml
 
 - name: Allow mu@martin-friese to log in
   authorized_key:
     user: watching
     key: "{{ lookup('file', '/home/mu/.ssh/id_rsa.pub') }}"
     state: present
-
-- name: Set `watching` to be logged in automatically
-  ini_file:
-    dest: /etc/lightdm/lightdm.conf
-    section: SeatDefaults
-    option: autologin-user
-    value: watching
-
-#- name: Set `watching` to use Lubuntu
-#  ini_file:
-#    dest: /etc/lightdm/lightdm.conf
-#    section: SeatDefaults
-#    option: user-session
-#    value: Lubuntu

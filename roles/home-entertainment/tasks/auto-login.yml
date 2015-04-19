@@ -1,0 +1,15 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Set `watching` to be logged in automatically
+  ini_file:
+    dest: /etc/lightdm/lightdm.conf
+    section: SeatDefaults
+    option: autologin-user
+    value: "{{ 'watching' if auto_login else ''}}"
+
+#- name: Set `watching` to use Lubuntu
+#  ini_file:
+#    dest: /etc/lightdm/lightdm.conf
+#    section: SeatDefaults
+#    option: user-session
+#    value: Lubuntu

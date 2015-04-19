@@ -22,3 +22,13 @@
   - role: ubuntu-release-upgrades
     lts: false
   - jan-weber
+  - role: home-entertainment
+    auto_login: false
+
+  tasks:
+  - name: No Guest autologin
+    ini_file:
+      dest: /etc/lightdm/lightdm.conf
+      section: SeatDefaults
+      option: autologin-guest
+      value: 'false'
