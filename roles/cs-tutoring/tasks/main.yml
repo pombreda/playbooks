@@ -3,7 +3,7 @@
 - name: Add new user
   user:
     name: tutoring
-    password: '{{ password }}'
+    password: "{{ lookup('file', '~/.secrects/tutoring-hash.txt') }}"
     update_password: on_create
     shell: /bin/bash
     comment: CS Tutoring,,,

@@ -1,4 +1,4 @@
-# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+# Copyright © 2014-2015 Martin Ueding <dev@martin-ueding.de>
 
 - name: Install radicale
   apt: name=radicale state=installed
@@ -10,7 +10,7 @@
   htpasswd:
     create: yes
     name: mu
-    password: '{{ password_mu_radicale }}'
+    password: "{{ lookup('password', '~/.secrets/martin-gelderland/radicale-mu.txt }}"
     path: '{{ htpasswd_filename }}'
     crypt_scheme: des_crypt
   notify:
