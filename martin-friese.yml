@@ -4,6 +4,10 @@
   hosts: localhost
   sudo: yes
   roles:
+  - role: lightdm-user-icon
+    tags: users
+    user: mu
+    image: mu.png
   - role: charge-limits
     start: 80
     stop: 85
