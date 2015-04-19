@@ -6,6 +6,7 @@
     - apache2
     - python-django
     - python-mysqldb
+    - sqlite3
 
 - name: Install WSGI script
   template: src=wsgi.j2 dest=/etc/apache2/conf.d/shopping-list
@@ -14,6 +15,14 @@
 
 - name: Create database configuration directory
   file: path=/etc/shopping-list/ state=directory
+
+- name: Ensure that the database exists
+  file:
+    path: '{{ sqlite_file }}'
+    state: file
+    owner: www-data
+    group: www-data
+    mode: 0644
 
 - name: Install database configuration file
   template:
