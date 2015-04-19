@@ -1,6 +1,6 @@
 # Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
 
 dependencies:
-  - role: user-with-lightdm-icon
+  - role: lightdm-user-icon
     user: mu
     image: mu.png
