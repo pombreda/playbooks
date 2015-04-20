@@ -16,13 +16,14 @@
 - name: Create database configuration directory
   file: path=/etc/shopping-list/ state=directory
 
+# https://code.djangoproject.com/wiki/NewbieMistakes#DjangosaysUnabletoOpenDatabaseFilewhenusingSQLite3
 - name: Ensure that the database directory exists
   file:
     path: '{{ sqlite_dir }}'
     state: directory
     owner: www-data
     group: www-data
-    mode: 0644
+    mode: 0755
 
 - name: Ensure that the database file exists
   file:
@@ -51,7 +52,6 @@
     - Restart Apache
 
 - name: Disable debugging
-  when: false
   lineinfile:
     dest: /opt/shopping-list-site/shoppinglistsite/settings.py
     regexp: '^DEBUG = '
@@ -59,7 +59,7 @@
   notify:
     - Restart Apache
 
-- name: Copy static files
-  command: python manage.py collectstatic --noinput
-  args:
-    chdir: /opt/shopping-list-site
+- name: Run collectstatic
+  django_manage:
+    app_path: /opt/shopping-list-site
+    command: collectstatic
