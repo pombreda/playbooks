@@ -16,9 +16,17 @@
 - name: Create database configuration directory
   file: path=/etc/shopping-list/ state=directory
 
-- name: Ensure that the database exists
+- name: Ensure that the database directory exists
   file:
-    path: '{{ sqlite_file }}'
+    path: '{{ sqlite_dir }}'
+    state: directory
+    owner: www-data
+    group: www-data
+    mode: 0644
+
+- name: Ensure that the database file exists
+  file:
+    path: '{{ sqlite_path }}'
     state: file
     owner: www-data
     group: www-data
@@ -43,6 +51,7 @@
     - Restart Apache
 
 - name: Disable debugging
+  when: false
   lineinfile:
     dest: /opt/shopping-list-site/shoppinglistsite/settings.py
     regexp: '^DEBUG = '

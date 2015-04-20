@@ -1,3 +1,5 @@
 # Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
 
-sqlite_file: /var/lib/shoppinglist.sqlite3
+sqlite_dir: /var/lib/shopping-list
+sqlite_file: shoppinglist.sqlite3
+sqlite_path: '{{ sqlite_dir }}/{{ sqlite_file }}'
