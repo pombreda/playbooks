@@ -21,3 +21,4 @@
   - openmpi-bin
   - pep8
   - pyflakes
+  - valgrind
