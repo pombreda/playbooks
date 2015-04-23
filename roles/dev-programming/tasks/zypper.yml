@@ -1,6 +1,6 @@
 # Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
 
-- name: Install common packages
+- name: Install development packages
   action: zypper name={{ item }} state=installed
   with_items:
 
@@ -12,7 +12,7 @@
   - python-pep8
   - python-pyflakes
 
-- name: Install common packages
+- name: Install development packages in latest version only
   when: ansible_distribution_version >= '13.2'
   action: zypper name={{ item }} state=installed
   with_items:
