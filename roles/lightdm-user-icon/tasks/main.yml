@@ -12,3 +12,9 @@
     section: User
     option: Icon
     value: /var/lib/AccountsService/icons/{{ user }}.png
+
+- name: Copy face icon for {{ user }} to the machine
+  copy:
+    src: '{{ image }}'
+    dest: /usr/share/sddm/faces/{{ user }}.face.icon
+    mode: 0644
