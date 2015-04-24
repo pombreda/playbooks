@@ -2,8 +2,8 @@
 
 - name: martin-konik
   hosts:
-  - martin-konik.local
+    - martin-konik.local
   roles:
-  - automatic-upgrades
-  - dev-packaging
-  - mu-conf
+    - automatic-upgrades
+    - dev-packaging
+    - mu-conf
