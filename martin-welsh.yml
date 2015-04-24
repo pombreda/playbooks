@@ -14,7 +14,7 @@
     tags: users
   - role: cs-tutoring
     password: '{{ tutoring_password_hash }}'
-  - mu-conf
+  - mu-conf-main
   - dev-programming
   - dev-latex
   - role: flash
