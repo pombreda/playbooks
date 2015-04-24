@@ -5,6 +5,7 @@
   with_items:
 
   - a4-scan
+  - akonadi-backend-sqlite
   - awesome
   - awesome-extra
   - backup-scripts
