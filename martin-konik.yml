@@ -8,4 +8,5 @@
     - mu-conf-main
     - automatic-upgrades
     - dev-packaging
+    - rpm-fusion
     - sddm
