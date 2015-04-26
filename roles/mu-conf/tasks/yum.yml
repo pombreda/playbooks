@@ -7,3 +7,8 @@
     - firefox
     - google-droid-sans-mono-fonts
     - vim-X11
+
+- name: Install VirtualBox guest utils
+  when: ansible_virtualization_role == 'guest' and ansible_virtualization_type == 'virtualbox'
+  yum: name=VirtualBox-guest state=present
+  ignore_errors: yes
