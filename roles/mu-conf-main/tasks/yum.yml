@@ -1,0 +1,47 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install packages
+  action: yum pkg={{ item }} state=installed
+  with_items:
+
+  - awesome
+  - clementine
+  - gimp
+  - inkscape
+  - k4dirstat
+  - keepassx
+  - konversation
+  - pavucontrol
+  - pinentry-qt4
+  - qrencode
+  - scantailor
+  - task
+  - unison240-gtk
+  - viking
+  - whois
+  - xournal
+  - zbar
+
+- name: Install my packages
+  when: 0 == 1
+  action: yum pkg={{ item }} state=installed
+  with_items:
+
+  - a4-scan
+  - backup-scripts
+  - legacy-file-formats
+  - lock-and-off
+  - maintenance
+  - mp3-packer
+  - unwrap-pdf-to-jpeg
+  - uni-tools
+
+  - akonadi-backend-sqlite
+  - awesome-extra
+  - fatrat
+  - pdftk
+  - enigmail
+  - mediathekview
+  - python3-termcolor
+  - imagemagick
+  - thunderbird-locale-de
