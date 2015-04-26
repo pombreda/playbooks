@@ -3,6 +3,7 @@
 - name: martin-konik
   hosts:
     - martin-konik.local
+    - fedora-22-beta.local
   roles:
     - automatic-upgrades
     - dev-packaging
