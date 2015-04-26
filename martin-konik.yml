@@ -5,6 +5,7 @@
     - martin-konik.local
     - fedora-22-beta.local
   roles:
+    - mu-conf-main
     - automatic-upgrades
     - dev-packaging
-    - mu-conf
+    - sddm
