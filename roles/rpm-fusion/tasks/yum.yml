@@ -1,0 +1,17 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install RPM Fusion free
+  when: ansible_distribution_major_version <= rpm_fusion_max_version
+  yum:
+    name: http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm
+    state: present
+
+#- name: Install RPM Fusion free
+#  yum:
+#    name: http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm
+#    state: present
+
+- name: Remove RPM Fusion free Rawhide from stable versions
+  yum:
+    name: http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-rawhide.noarch.rpm
+    state: absent
