@@ -1,0 +1,11 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Copy desktop file for KDE 4
+  copy:
+    src: awesome.desktop
+    dest: /usr/share/kde4/apps/ksmserver/windowmanagers/
+
+- name: Copy desktop file KF 5
+  copy:
+    src: awesome.desktop
+    dest: /usr/share/ksmserver/windowmanagers/
