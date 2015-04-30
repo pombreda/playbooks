@@ -4,6 +4,8 @@
   hosts: localhost
   sudo: yes
   roles:
+  - role: dbus-system-eavesdrop
+    state: present
   - role: lightdm-user-icon
     tags: users
     user: mu

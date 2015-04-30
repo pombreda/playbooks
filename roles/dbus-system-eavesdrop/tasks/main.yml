@@ -1,0 +1,13 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Copy policy file
+  when: state == 'present'
+  copy:
+    src: system-local.conf
+    dest: /etc/dbus-1/system-local.conf
+
+- name: Delete policy file
+  when: state == 'absent'
+  file:
+    dest: /etc/dbus-1/system-local.conf
+    state: absent
