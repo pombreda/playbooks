@@ -1,0 +1,4 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Restart tinyproxy
+  service: name=tinyproxy state=restarted

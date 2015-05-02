@@ -4,3 +4,4 @@
   hosts: martin-knapstrup.local
   roles:
   - mu-conf-cli
+  - http-proxy

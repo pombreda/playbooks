@@ -1,0 +1,11 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Install tinyproxy
+  apt: name=tinyproxy state=installed
+
+- name: Install config
+  template:
+    src: tinyproxy.conf.j2
+    dest: /etc/tinyproxy.conf
+  notify:
+    - Restart tinyproxy
