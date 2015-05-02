@@ -1,11 +1,11 @@
 # Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
 
-- name: Install tinyproxy
-  apt: name=tinyproxy state=installed
+- name: Install squid
+  apt: name=squid3 state=present
 
 - name: Install config
   template:
-    src: tinyproxy.conf.j2
-    dest: /etc/tinyproxy.conf
+    src: squid.conf.j2
+    dest: /etc/squid3/squid.conf
   notify:
-    - Restart tinyproxy
+    - Restart squid3
