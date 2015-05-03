@@ -1,0 +1,35 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Remove graphical packages
+  action: apt name=x11-common state=absent purge=yes
+  with_items:
+    - x11-common
+
+    # http://blog.qruizelabs.com/2014/04/23/stripping-down-a-standard-raspbian-installation/
+    - desktop-base
+    - lightdm
+    - lxappearance
+    - lxde-common
+    - lxde-icon-theme
+    - lxinput
+    - lxpanel
+    - lxpolkit
+    - lxrandr
+    - lxsession-edit
+    - lxshortcut
+    - lxtask
+    - lxterminal
+
+    - wolfram-engine
+
+    - obconf
+    - openbox
+    - raspberrypi-artwork
+    - xarchiver
+    - xinit
+    - xserver-xorg
+    - xserver-xorg-video-fbdev
+    - x11-utils
+    - x11-common
+    - x11-session
+    - utils

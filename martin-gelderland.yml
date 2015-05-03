@@ -3,6 +3,8 @@
 - name: martin-gelderland
   hosts: martin-gelderland.local
   roles:
+    - role: raspbian-server
+      tags: cleanup
     - role: shopping-list
       tags: shopping-list
 #    - role: franklinkim.vsftpd
