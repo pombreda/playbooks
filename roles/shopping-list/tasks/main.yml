@@ -65,6 +65,13 @@
   notify:
     - Restart Apache
 
+- name: Ensure that all the Python files belong to www-data
+  file:
+    path: /opt/shopping-list-site
+    owner: www-data
+    group: www-data
+    recurse: yes
+
 - name: Run collectstatic
   django_manage:
     app_path: /opt/shopping-list-site

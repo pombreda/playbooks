@@ -5,16 +5,15 @@ WSGIScriptAlias /shoppinglist /opt/shopping-list-site/shoppinglistsite/wsgi.py
 WSGIPythonPath /opt/shopping-list-site/
 
 <Directory /opt/shopping-list-site/shoppinglistsite/>
-        <Files wsgi.py>
-        Allow from all
-        </Files>
+    <Files wsgi.py>
+        Require all granted
+    </Files>
 </Directory>
 
 Alias /shoppinglist/static/ /usr/share/shopping-list/static/
 
 <Directory /usr/share/shopping-list/static/>
-    Order deny,allow
-    Allow from all
+    Require all granted
 </Directory>
 
 # vim: ft=apache
