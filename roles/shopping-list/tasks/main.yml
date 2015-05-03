@@ -9,9 +9,15 @@
     - sqlite3
 
 - name: Install WSGI script
-  template: src=wsgi.j2 dest=/etc/apache2/conf.d/shopping-list
+  template: src=wsgi.j2 dest=/etc/apache2/conf-available/shopping-list.conf
   notify:
     - Restart Apache
+
+- name: Enable config snippet
+  file:
+    src: /etc/apache2/conf-available/shopping-list.conf
+    dest: /etc/apache2/conf-enabled/shopping-list.conf
+    state: link
 
 - name: Create database configuration directory
   file: path=/etc/shopping-list/ state=directory
