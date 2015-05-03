@@ -18,6 +18,7 @@
     - suspend-hdd
 
     - role: smokeping
+      tags: smokeping
       sections:
         Internet:
           - [martin-ueding, martin-ueding.de]

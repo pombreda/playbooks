@@ -1,4 +1,7 @@
-# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+# Copyright © 2014-2015 Martin Ueding <dev@martin-ueding.de>
 
 - name: Restart smokeping
   service: name=smokeping state=restarted
+
+- name: Restart Apache
+  service: name=apache2 state=restarted

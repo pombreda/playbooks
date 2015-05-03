@@ -1,4 +1,4 @@
-# Copyright © 2014 Martin Ueding <dev@martin-ueding.de>
+# Copyright © 2014-2015 Martin Ueding <dev@martin-ueding.de>
 
 - name: Install smokeping
   apt: name=smokeping state=present
@@ -7,3 +7,11 @@
   template: src=Targets.j2 dest=/etc/smokeping/config.d/Targets mode=644
   notify:
   - Restart smokeping
+
+- name: Link config
+  file:
+    src: /etc/apache2/conf.d/smokeping
+    dest: /etc/apache2/conf-enabled/smokeping.conf
+    state: link
+  notify:
+    - Restart Apache
