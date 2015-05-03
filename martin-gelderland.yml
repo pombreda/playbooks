@@ -5,11 +5,11 @@
   roles:
     - role: shopping-list
       tags: shopping-list
-    - role: franklinkim.vsftpd
-      vsftpd_config:
-        local_enable: YES
-        write_enable: YES
-        ftpd_banner: Welcome to martin-gelderland FTP service.
+#    - role: franklinkim.vsftpd
+#      vsftpd_config:
+#        local_enable: YES
+#        write_enable: YES
+#        ftpd_banner: Welcome to martin-gelderland FTP service.
 
     - role: radicale
 
@@ -30,8 +30,6 @@
     - file-server
 
     - role: apache-with-ssl
-
-    - role: mysql-server
 
     - role: gelderland-backup
 
