@@ -4,6 +4,8 @@
   hosts: localhost
   sudo: yes
   roles:
+  - role: automatic-login
+    user: mu
   - role: dbus-system-eavesdrop
     state: absent
   - role: lightdm-user-icon

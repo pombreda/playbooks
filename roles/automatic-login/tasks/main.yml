@@ -1,0 +1,12 @@
+# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+
+- name: Gather facts about display manager
+  fact_display_manager:
+
+- name: Set autologin for SDDM
+  when: display_manager == 'sddm'
+  ini_file:
+    dest: /etc/sddm.conf
+    section: Autologin
+    option: User
+    value: '{{ user }}'
